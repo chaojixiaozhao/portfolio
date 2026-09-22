@@ -25,6 +25,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .navlinks a{font-size:12.5px;color:var(--muted);text-decoration:none;letter-spacing:.05em;transition:color .2s;padding:3px 0;border-bottom:1px solid transparent}
 .navlinks a:hover{color:var(--navy)}
 .navlinks a.on{color:var(--navy);border-bottom-color:var(--gold)}
+.navlinks a.langbtn{border:1px solid var(--navy);border-bottom:1px solid var(--navy);padding:4px 14px;border-radius:999px;color:var(--navy);letter-spacing:.08em;margin-left:6px}
+.navlinks a.langbtn:hover{background:var(--navy);color:#fff}
 
 .hero{background:linear-gradient(155deg,#08203C 0%,#0E3560 55%,#134A80 100%);color:#fff;position:relative;overflow:hidden}
 .hero:after{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
@@ -200,7 +202,7 @@ section.tinted{background:var(--soft);border-top:1px solid var(--line);border-bo
 .casetag{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:#fff;background:var(--gold);padding:3px 9px;margin-left:10px;vertical-align:3px}
 .casehl{border:1px solid var(--gold);background:linear-gradient(180deg,#FFFDF7 0%,#FFFFFF 100%)}
 
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .step{border-top:3px solid var(--navy);background:var(--white);padding:22px 20px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .step .no{font-family:var(--serif);font-size:26px;color:#C8D6E8;line-height:1}
 .step h3{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--navy);margin:10px 0 4px}
@@ -316,7 +318,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <a href="#overview" class="nl">关于我</a>
     <a href="#assistant" class="nl">AI 问答</a>
     <a href="#contact" class="nl">联系</a>
-    <a href="https://chaojixiaozhao.github.io/portfolio-en/" class="nl">EN</a>
+    <a href="https://chaojixiaozhao.github.io/portfolio-en/" class="nl langbtn">English</a>
   </div>
 </div></nav>
 
@@ -402,28 +404,35 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <section id="approach"><div class="wrap">
   <div class="sechead"><span class="secnum">03</span><h2>我怎么做事</h2><span class="en">Approach</span></div>
-  <p class="secsub">三段式工作方法，每一步都挂着一个我做过的真实项目——不是方法论模板，是我实际做事的顺序。</p>
+  <p class="secsub">四步成单方法：看市场 → 验数据 → 做触达 → 供价值。每一步都挂着一个我做过的真实项目——不是方法论模板，是我实际把腾讯云 AIGC 客户做下来的顺序。</p>
   <div class="steps">
     <div class="step">
       <div class="no">01</div>
-      <h3>读信号：先立假设</h3>
-      <div class="en">READ THE SIGNAL</div>
-      <p>从政策、行业周期、竞品动向倒推客户必然会遇到的压力，在客户自己意识到之前先把假设立起来。没有假设的拜访只是聊天，问不出真需求。</p>
-      <div class="eg"><b>实例：</b>三大交易所信息披露新规 → 客户的 ESG 评级需求（安永：80 页服务方案 + 3 轮拜访）；同行都在抢 AI 短剧 → 我从画质要求与单项目消耗判断长片（AI 电影）机会更大，锁定高质量短剧与 AI 电影提供方（腾讯云）。</div>
+      <h3>看市场：找结构性机会</h3>
+      <div class="en">READ THE MARKET</div>
+      <p>先判断赛道，再找客户。同行都在抢 AI 短剧时，我从画质要求与单项目消耗两个维度判断：长片（AI 电影）对质量要求更高、单项目 Token 消耗更大，是更值得压上去的方向——提前锁定国内高质量短剧与 AI 电影的提供方。</p>
+      <div class="eg"><b>实例：</b>三大交易所信息披露新规 → 客户的 ESG 评级需求（安永）；同行扎堆 AI 短剧 → 我判断 AI 电影机会更大（腾讯云）。</div>
     </div>
     <div class="step">
       <div class="no">02</div>
-      <h3>现场验证：把假设打穿</h3>
-      <div class="en">TEST ON SITE</div>
-      <p>假设不等于需求。用多轮调研与拜访把假设打穿，直到客户承认这就是他的问题；同时把定性体感换算成定量口径，否则无法报价、也无法判断优先级。</p>
-      <div class="eg"><b>实例：</b>大湾区旅游业客户做了 4 轮调研才锁定客服质检与直播两个场景；AIGC 客户私接海外低价模型、比价没有胜算 → 我在绩效管理场景里挖出「跨模型统一账单」这个只有我们能解决的问题。</div>
+      <h3>验数据：确认需求真实存在</h3>
+      <div class="en">VALIDATE WITH DATA</div>
+      <p>大致逻辑确定后，用数据验证市场。搜集 AI 电影行业报告交叉验证：成本比传统制作低一倍以上、Token 消耗真实、需求量大——1000 万投资的项目约需 400 万 Token 量级的消耗，确认方向值得投入。</p>
+      <div class="eg"><b>实例：</b>AI 电影成本 ≈ 传统制作的一半；单项目 Token 消耗达百万量级（腾讯云 AIGC）。</div>
     </div>
     <div class="step">
       <div class="no">03</div>
-      <h3>翻译成可买单方案，并推到产生消耗</h3>
-      <div class="en">TRANSLATE &amp; CLOSE</div>
-      <p>联合架构师与售前明确技术要求，组织 POC 与友商对标，选定商务路径后一路推到真正产生消耗，并跟完合同、结算与发票。</p>
-      <div class="eg"><b>实例：</b>AIGC 影视客户完成 Token Hub 接入、进入后付费跑量；字节火山云迁移推动管理层认可「存量优化为主、商务折扣为辅」。</div>
+      <h3>做触达：全渠道找到关键人</h3>
+      <div class="en">REACH &amp; CONNECT</div>
+      <p>从市面上已上映的作品反向溯源背后工作室，用人脉认识关键人，列出客户名单逐一跟进。名单上的重点客户，我更相信线下见面的效果——查到北京有 AIGC 电影节、几位目标客户都在出席名单上，于是报名参加，在晚宴上遇到并加上联系方式，之后独立登门拜访、参观客户公司验证业务真实性。</p>
+      <div class="eg"><b>实例：</b>北京 AIGC 电影节晚宴结识创始人 → 独立拜访验证 → 进入商务环节（腾讯云）。</div>
+    </div>
+    <div class="step">
+      <div class="no">04</div>
+      <h3>供价值：洞察真需求，成单</h3>
+      <div class="en">DELIVER VALUE &amp; CLOSE</div>
+      <p>客户私接了很多模型渠道（含海外），价格远低于云厂商，比价没有胜算——直到从对方 IT 总的绩效管理痛点里挖出真需求：没有统一账单，无法按 Token 消耗对画师做绩效管理。腾讯统一大模型平台恰好能统一检测各模型消耗量，抓住这一点打动对方老板，再用百万级消耗推算撬动内部老板与架构师支持，最终成单。</p>
+      <div class="eg"><b>实例：</b>跨模型统一账单 → 绩效管理场景的唯一解；百万级消耗撬动内部支持（腾讯云）。</div>
     </div>
   </div>
 </div></section>
@@ -1093,6 +1102,7 @@ document.getElementById("q").addEventListener("keydown",function(e){if(e.key==="
       if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id;
     });
     for(var i=0;i<links.length;i++){
+      if(links[i].classList.contains("langbtn"))continue;
       links[i].className=(links[i].getAttribute("href")==="#"+cur)?"nl on":"nl";
     }
   });
