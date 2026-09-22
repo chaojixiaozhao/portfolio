@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23082C4F'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23C9A227' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<title>赵梓延 ZIYAN ZHAO · 技术产品商务</title>
+<style>
+:root{
+  --navy:#0A2240; --deep:#061629; --navy2:#123A63; --blue:#1B4F8C;
+  --steel:#2E6BA8; --gold:#C9A961; --ink:#16233A;
+  --muted:#64748B; --line:#DCE4EF; --soft:#F2F6FB; --white:#FFFFFF;
+  --serif:Georgia,"Songti SC","Source Han Serif SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 40px}
+
+nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(10px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-size:16px;color:var(--navy);letter-spacing:.02em}
+.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:24px}
+.navlinks a{font-size:12.5px;color:var(--muted);text-decoration:none;letter-spacing:.05em;transition:color .2s;padding:3px 0;border-bottom:1px solid transparent}
+.navlinks a:hover{color:var(--navy)}
+.navlinks a.on{color:var(--navy);border-bottom-color:var(--gold)}
+
+.hero{background:linear-gradient(155deg,#08203C 0%,#0E3560 55%,#134A80 100%);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;border:1px solid rgba(255,255,255,.08);border-radius:50%}
+.hero:before{content:"";position:absolute;right:-40px;top:40px;width:340px;height:340px;border:1px solid rgba(255,255,255,.06);border-radius:50%}
+.hero .wrap{position:relative;z-index:2;padding-top:30px;padding-bottom:18px}
+.hero .wrap.heroflex{display:flex;align-items:center;gap:44px;flex-wrap:wrap}
+.heromain{flex:1 1 430px;min-width:0}
+.portrait{flex:0 0 auto;width:170px;align-self:flex-end;position:relative}
+.portrait img{display:block;width:100%}
+.metrics{width:100%}
+.eyebrow{font-size:11.5px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+h1{font-family:var(--serif);font-size:48px;line-height:1.22;color:#fff;font-weight:400;letter-spacing:.01em}
+h1 em{font-style:normal;color:#9CC1E8}
+.tagline{margin-top:14px;font-size:16px;color:rgba(255,255,255,.76);max-width:700px;line-height:1.62}
+.tagline span{display:block;margin-top:8px}
+.tagline .tlcase{color:rgba(255,255,255,.93);font-size:16.5px;line-height:1.8}
+.mdlogo{cursor:zoom-in}
+.tagline .tllife{color:rgba(255,255,255,.55);font-size:14.5px;letter-spacing:.02em}
+.tagline .tlchain{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:9px}
+.tagline .tlchain .ch{display:flex;align-items:center;gap:8px;margin-top:0}
+.tagline .tlchain .ar{display:inline;margin-top:0}
+.tlchain .chlg{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:3px;width:60px;height:26px;padding:4px 7px;flex-shrink:0}
+.tlchain .chlg img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+.tlchain b{font-size:15px;color:rgba(255,255,255,.94);font-weight:500;letter-spacing:.02em}
+.tlchain .ar{color:rgba(255,255,255,.42);font-size:13px}
+.tagline b{color:#fff;font-weight:500}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);margin-top:18px}
+.metric{background:rgba(6,22,41,.55);padding:14px 16px;backdrop-filter:blur(2px)}
+.metric .n{font-family:var(--serif);font-size:28px;color:#fff;line-height:1.1}
+.metric .n small{font-size:14px;color:#9CC1E8}
+.metric .l{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:5px;letter-spacing:.02em}
+.rolebar{margin-top:16px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);padding:12px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rolebar .q{font-size:13px;color:#fff;letter-spacing:.02em}
+.chip{font-size:12.5px;padding:6px 15px;border:1px solid rgba(255,255,255,.28);color:#fff;cursor:pointer;border-radius:2px;transition:all .18s;background:transparent}
+.chip:hover{border-color:#9CC1E8;background:rgba(255,255,255,.08)}
+.chip.on{background:var(--gold);border-color:var(--gold);color:#08203C}
+.rolehint{margin-top:10px;font-size:13px;color:rgba(255,255,255,.7);min-height:22px}
+.rolehint b{color:var(--gold);font-weight:500}
+
+section{padding:50px 0}
+#experience{padding-top:22px}
+section.tinted{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+.secnum{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.1em}
+.sechead h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--navy)}
+.sechead .en{font-size:11.5px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+.secsub{font-size:13.5px;color:var(--muted);max-width:740px;margin-bottom:28px;line-height:1.8}
+
+.about{font-size:15px;color:#2C3B52;max-width:780px;line-height:1.95}
+.about p{margin-bottom:16px}
+.about b{color:var(--navy);font-weight:500}
+.tools{margin-top:34px;display:flex;flex-wrap:wrap;gap:8px}
+.tools .chip{border-color:var(--line);color:var(--navy);background:var(--white)}
+.tools .chip:hover{border-color:var(--steel);background:var(--soft)}
+.toolgrp{font-size:11.5px;letter-spacing:.1em;color:var(--gold);margin:26px 0 10px}
+
+.capviz{display:grid;grid-template-columns:520px 1fr;gap:28px;align-items:start}
+.radarbox,.capside{border:1px solid var(--line);background:var(--white)}
+.radarbox{padding:16px 16px 12px}
+.rboxtitle{font-size:10.5px;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+.radarbox svg{width:100%;height:auto;display:block;overflow:visible}
+.axlabel{font-size:11.5px;fill:#16233A;cursor:pointer}
+.axlabel.on{fill:#C9A961;font-weight:600}
+.axval{font-size:10.5px;fill:#8496AE;font-family:var(--serif)}
+.axval.on{fill:#C9A961;font-weight:700}
+.axhit{cursor:pointer;fill:transparent}
+.capside{padding:24px 24px;min-height:322px}
+.cside-sh{font-size:10.5px;letter-spacing:.14em;color:var(--gold)}
+.capside h4{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--navy);margin:8px 0 3px}
+.capside .cen{font-size:10.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.capside .csc{display:flex;gap:34px;margin:16px 0 14px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.capside .csc .n{font-family:var(--serif);font-size:26px;color:var(--navy);line-height:1;display:block}
+.capside .csc .n small{font-size:13px;color:var(--muted)}
+.capside .csc .l{font-size:11px;color:var(--muted);margin-top:6px;display:block}
+.capside .csc .up .n{color:var(--gold)}
+.capside .cdef{font-size:13.5px;color:#2C3B52;line-height:1.9}
+.capside .cev{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:12.5px;color:#4A5A72;line-height:1.85}
+.capside .cev b{color:var(--navy);font-weight:500}
+.capside .cup{margin-top:14px;padding:12px 14px;background:#FAFBFD;border-left:3px solid var(--gold);font-size:12.5px;color:#4A5A72;line-height:1.9}
+.capside .cup b{color:var(--navy);font-weight:500}
+.capside .cgap{margin-top:14px;padding:12px 14px;background:#FDF8F1;border-left:3px solid #C9A961;font-size:12.5px;color:#5A4A32;line-height:1.9}
+.capside .cgap b{color:#8A6D00;font-weight:500}
+.capside .chint{font-size:13px;color:var(--muted);line-height:1.9}
+.capside .clist{margin-top:14px;font-size:12.5px;color:#4A5A72;line-height:1.9}
+.capside .clist span{color:var(--gold);margin-right:8px;font-family:var(--serif)}
+
+.mx{overflow-x:auto}
+.mxscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mxtable{width:100%;min-width:640px;border-collapse:separate;border-spacing:4px}
+.mxtable th{font-size:11.5px;color:var(--muted);font-weight:400;padding:4px 2px 8px;text-align:center;letter-spacing:.03em}
+.mxtable th.rh{text-align:left;color:var(--navy);font-size:12.5px;width:118px;white-space:nowrap;padding-bottom:8px}
+.mxtable td{height:38px;text-align:center;font-size:11.5px;border-radius:2px;cursor:pointer;transition:box-shadow .15s,transform .12s}
+.mxtable td.l0{background:#F4F7FB;color:#B5C3D6}
+.mxtable td.l1{background:#DCE8F6;color:#54759B}
+.mxtable td.l2{background:#7FA8D4;color:#fff}
+.mxtable td.l3{background:#123A63;color:#fff}
+.mxtable td:hover{box-shadow:0 0 0 2px var(--gold);transform:scale(1.04)}
+.mxtable td.sel{box-shadow:0 0 0 2px var(--gold)}
+.mxtip{margin-top:18px;border-left:2px solid var(--gold);padding:6px 0 6px 18px;font-size:13.5px;color:#2C3B52;line-height:1.8;min-height:48px}
+.mxtip .em{display:block;margin-top:5px;font-size:12px;color:var(--muted)}
+.mxscale{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--muted)}
+.mxscale i{display:inline-block;width:20px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+.capgrid{display:grid;grid-template-columns:224px 1fr;gap:34px}
+.caps{display:flex;flex-direction:column;gap:8px}
+.capitem{border:1px solid var(--line);padding:12px 14px;cursor:pointer;transition:all .2s;background:var(--white)}
+.capitem .t{font-size:14px;color:var(--navy)}
+.capitem .e{font-size:10.5px;color:var(--muted);letter-spacing:.07em;margin-top:3px}
+.capitem:hover{border-color:var(--steel)}
+.capitem.on{background:var(--navy);border-color:var(--navy)}
+.capitem.on .t{color:#fff}
+.capitem.on .e{color:#9CC1E8}
+.capitem.off{opacity:.3}
+.expgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-content:start}
+.expcard{border:1px solid var(--line);padding:14px;cursor:pointer;transition:all .2s;background:var(--white);display:flex;gap:12px;align-items:center}
+.expcard .lg,.tlhead .lg{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:3px;width:118px;height:44px;padding:6px;flex-shrink:0}
+.expcard .lg svg,.tlhead .lg svg{width:100%;height:100%}
+.expcard .lg img,.tlhead .lg img{max-width:100%;max-height:100%;object-fit:contain}
+.lg.lgmd{width:152px;height:56px;padding:3px}
+.lgcap{font-size:9.5px;color:var(--muted);letter-spacing:.1em;text-align:center;width:152px}
+.lgwrap{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.livestrip{display:flex;gap:4px}
+.livestrip img{flex:1 1 0;min-width:0;height:88px;object-fit:contain;border-radius:2px;border:1px solid var(--line);cursor:zoom-in;transition:transform .15s,border-color .15s;background:#fff}
+.livestrip img:hover{transform:scale(1.06);border-color:var(--gold)}
+#lbox{position:fixed;inset:0;background:rgba(10,25,47,.88);display:none;align-items:center;justify-content:center;z-index:999;cursor:zoom-out;flex-direction:column;gap:14px;padding:40px}
+#lbox.on{display:flex}
+#lbox img{max-width:min(820px,86vw);max-height:74vh;border-radius:4px;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+#lbox .cap{color:rgba(255,255,255,.85);font-size:14px;letter-spacing:.5px}
+.expcard .t{font-size:14px;color:var(--navy);font-weight:500}
+.expcard .d{font-size:11.5px;color:var(--muted);margin-top:2px}
+.expcard:hover{border-color:var(--steel)}
+.expcard.on{background:#E8F0FA;border-color:var(--steel);box-shadow:inset 3px 0 0 var(--navy)}
+.expcard.off{opacity:.3}
+.evidence{margin-top:26px;border-left:2px solid var(--gold);padding:4px 0 4px 20px;min-height:64px}
+.evidence .eh{font-size:11.5px;color:var(--gold);letter-spacing:.12em;margin-bottom:10px}
+.evidence ul{list-style:none}
+.evidence li{font-size:13.5px;color:#2C3B52;margin-bottom:7px;padding-left:15px;position:relative;line-height:1.75}
+.evidence li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:1px;background:var(--gold)}
+.evidence .empty{font-size:13px;color:var(--muted)}
+
+.tlgroup{margin-bottom:12px}
+.tlghead{display:flex;align-items:baseline;gap:12px;padding:0 0 9px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.tlghead .zh{font-family:var(--serif);font-size:17px;color:var(--navy);letter-spacing:.03em}
+.tlghead .zh:before{content:"";display:inline-block;width:16px;height:2px;background:var(--gold);vertical-align:5px;margin-right:10px}
+.tlghead .en{font-size:10.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.tlghead .ct{margin-left:auto;font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+.tl{position:relative;padding-left:28px}
+.tl:before{content:"";position:absolute;left:6px;top:10px;bottom:10px;width:1px;background:var(--line)}
+.tlitem{position:relative;margin-bottom:14px}
+.tlitem:before{content:"";position:absolute;left:-26px;top:26px;width:9px;height:9px;border-radius:50%;background:var(--white);border:2px solid var(--steel)}
+.tlitem.hl:before{background:var(--gold);border-color:var(--gold)}
+.tlhead{border:1px solid var(--line);padding:18px 20px;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto auto;gap:18px;align-items:center;transition:background .2s,border-color .2s;background:var(--white)}
+.tlhead:hover{background:#F7FAFD;border-color:var(--steel)}
+.tlhead.open{background:#F7FAFD;border-color:var(--steel)}
+.tlhead .ttl{font-size:16px;color:var(--navy);font-weight:500}
+.tlhead .meta{font-size:12px;color:var(--muted);margin-top:4px}
+.tlhead .hook{font-size:13px;color:var(--blue);margin-top:8px;line-height:1.6}
+.tlhead .hook:before{content:"";display:inline-block;width:14px;height:1px;background:var(--gold);vertical-align:4px;margin-right:8px}
+.minik{display:flex;gap:20px}
+.minik div{text-align:right}
+.minik b{font-family:var(--serif);font-size:20px;color:var(--navy);font-weight:400;display:block;line-height:1.1}
+.minik span{font-size:11px;color:var(--muted)}
+.arrow{font-size:12px;color:var(--muted);transition:transform .2s}
+.tlhead.open .arrow{transform:rotate(90deg);color:var(--navy)}
+.tlbody{display:none;border:1px solid var(--line);border-top:none;padding:22px 20px;background:var(--white)}
+.tlbody.open{display:block}
+.sar{display:grid;grid-template-columns:78px 1fr;gap:12px 16px;font-size:13.5px;line-height:1.85}
+.sar .k{font-size:11.5px;color:var(--gold);letter-spacing:.08em;padding-top:4px}
+.sar .v{color:#2C3B52}
+.kpi{display:flex;gap:30px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.kpi div{font-size:12px;color:var(--muted)}
+.kpi b{font-family:var(--serif);font-size:21px;color:var(--navy);font-weight:400;display:block;margin-bottom:2px}
+.casetag{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:#fff;background:var(--gold);padding:3px 9px;margin-left:10px;vertical-align:3px}
+.casehl{border:1px solid var(--gold);background:linear-gradient(180deg,#FFFDF7 0%,#FFFFFF 100%)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{border-top:3px solid var(--navy);background:var(--white);padding:22px 20px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step .no{font-family:var(--serif);font-size:26px;color:#C8D6E8;line-height:1}
+.step h3{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--navy);margin:10px 0 4px}
+.step .en{font-size:10.5px;letter-spacing:.12em;color:var(--gold);margin-bottom:12px}
+.step p{font-size:13px;color:#2C3B52;line-height:1.8}
+.step .eg{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--muted);line-height:1.75}
+.step .eg b{color:var(--blue);font-weight:500}
+
+.kg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+.kgc{border:1px solid var(--line);padding:18px;background:var(--white);border-top:2px solid var(--navy)}
+.kgc .n{font-family:var(--serif);font-size:25px;color:var(--navy)}
+.kgc .l{font-size:11.5px;color:var(--muted);margin-top:6px}
+.switch{display:flex;gap:8px;margin-bottom:22px}
+.switch .chip{border-color:var(--line);color:var(--navy);background:var(--white)}
+.switch .chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar{display:grid;grid-template-columns:132px 1fr 80px;align-items:center;gap:14px;font-size:13px;color:#2C3B52}
+.bar .track{height:22px;background:#E4ECF6;position:relative}
+.bar .fill{height:100%;background:linear-gradient(90deg,#123A63,#2E6BA8);transition:width .5s ease}
+.bar .fill.g{background:linear-gradient(90deg,#1B4F8C,#5B93CB)}
+.bar .val{text-align:right;font-family:var(--serif);color:var(--navy);font-size:16px}
+.note{font-size:12px;color:var(--muted);margin-top:18px}
+
+.subhead{display:flex;align-items:baseline;gap:12px;padding:0 0 12px;border-bottom:1px solid var(--line);margin:44px 0 20px}
+.subhead .zh{font-family:var(--serif);font-size:17px;color:var(--navy);letter-spacing:.03em}
+.subhead .zh:before{content:"";display:inline-block;width:16px;height:2px;background:var(--gold);vertical-align:5px;margin-right:10px}
+.subhead .en{font-size:10.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.subhead .ct{margin-left:auto;font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+
+.hlgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.hlc{border:1px solid var(--line);background:var(--white);padding:16px 18px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,box-shadow .2s}
+.hlc:hover{border-color:var(--steel);box-shadow:0 2px 10px rgba(10,34,64,.06)}
+.hlc .rk{flex-shrink:0;width:30px;height:30px;border-radius:3px;background:var(--soft);color:var(--navy);font-family:var(--serif);font-size:13px;display:flex;align-items:center;justify-content:center}
+.hlc .tt{font-size:14px;color:var(--navy);font-weight:500;line-height:1.55}
+.hlc .dt{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.03em}
+.hlc .nums{display:flex;gap:12px;font-size:11.5px;color:var(--muted);margin-top:7px}
+.hlc .nums b{color:var(--navy);font-weight:500;font-family:var(--serif);font-size:13px}
+.hlc .bd{flex:1;min-width:0}
+.hlc .thumb{flex-shrink:0;width:78px;height:78px;border:1px solid var(--line);background:var(--soft);overflow:hidden}
+.hlc .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.hlc .why{font-size:12.5px;color:#4A5A72;line-height:1.7;margin-top:9px;padding-top:9px;border-top:1px dashed var(--line)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.shots figure{margin:0;background:#fff;border:1px solid var(--line);border-top:2px solid var(--ac,#1B3A6B);border-radius:3px;overflow:hidden;transition:box-shadow .18s,transform .18s}
+.shots figure:hover{box-shadow:0 8px 22px rgba(15,32,64,.12);transform:translateY(-2px)}
+.shots img{width:100%;height:210px;object-fit:contain;display:block;background:var(--act,#F2F5FA);cursor:zoom-in}
+.shots figcaption{font-size:11px;color:var(--ac,#4A5A72);line-height:1.55;padding:9px 11px 10px;letter-spacing:.02em;border-top:1px solid var(--line)}
+
+.voices{display:flex;flex-direction:column;gap:14px}
+.voc{border-left:2px solid var(--gold);background:var(--white);padding:18px 22px}
+.voc .q{font-family:var(--serif);font-size:15.5px;line-height:1.85;color:var(--navy)}
+.voc .cm{font-size:12.5px;color:#4A5A72;margin-top:10px;line-height:1.7}
+.voc .src{font-size:11px;color:var(--muted);margin-top:8px;letter-spacing:.03em}
+
+.askbox{border:1px solid var(--line);padding:26px;background:var(--white);border-top:2px solid var(--navy)}
+.askrow{display:flex;gap:10px}
+.askrow input{flex:1;padding:12px 14px;border:1px solid var(--line);font-size:14px;font-family:var(--sans);background:var(--white);outline:none;color:var(--ink)}
+.askrow input:focus{border-color:var(--steel)}
+.askrow button{padding:12px 24px;background:var(--navy);color:#fff;border:none;font-size:13.5px;cursor:pointer;font-family:var(--sans);letter-spacing:.05em;transition:background .2s}
+.askrow button:hover{background:var(--navy2)}
+.sugg{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.sugg .chip{border-color:var(--line);color:var(--navy);background:var(--white)}
+.sugg .chip:hover{border-color:var(--steel);background:var(--soft)}
+.answer{margin-top:22px;border-left:2px solid var(--navy);padding:2px 0 2px 20px;font-size:14px;line-height:1.9;color:#2C3B52;display:none}
+.answer .src{font-size:11.5px;color:var(--muted);margin-top:12px;letter-spacing:.03em}
+.answer b{color:var(--navy);font-weight:500}
+
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact div{border-top:2px solid var(--navy);padding-top:13px}
+.contact .k{font-size:11px;color:var(--muted);letter-spacing:.1em}
+.contact .v{font-size:14px;color:var(--navy);margin-top:6px;word-break:break-all}
+
+footer{background:var(--deep);color:rgba(255,255,255,.6);padding:28px 0 40px;font-size:12px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media(max-width:880px){
+  .wrap{padding:0 22px}
+  h1{font-size:33px}
+  .metrics,.kg{grid-template-columns:repeat(2,1fr)}
+  .metrics .metric:last-child{grid-column:span 2}
+  .portrait{width:136px;margin:0 auto;align-self:center}
+  .heromain{flex:1 1 100%}
+  .capgrid{grid-template-columns:1fr}
+  .capviz{grid-template-columns:1fr}
+  .capviz>*,.capgrid>*,.caps{min-width:0}
+  .capitem .e{word-break:break-word}
+  .expgrid{grid-template-columns:repeat(2,1fr)}
+  .expgrid>*,.steps>*,.hlgrid>*,.contact>*,.shots>*{min-width:0}
+  .steps{grid-template-columns:1fr}
+  .hlgrid{grid-template-columns:1fr}
+  .shots{grid-template-columns:repeat(2,1fr)}
+  .shots img{height:170px}
+  .contact{grid-template-columns:1fr}
+  .tlhead{grid-template-columns:auto 1fr;gap:14px}
+  .minik{grid-column:1/-1;justify-content:flex-start}
+  .minik div{text-align:left}
+  .arrow{display:none}
+  .navlinks{gap:13px}
+  .navlinks a{font-size:11px}
+}
+@media(max-width:640px){
+  .expgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand">赵梓延 <span>·</span> ZIYAN ZHAO</div>
+  <div class="navlinks">
+    <a href="#experience" class="nl">经历</a>
+    <a href="#capability" class="nl">能力</a>
+    <a href="#approach" class="nl">方法</a>
+    <a href="#media" class="nl">自媒体</a>
+    <a href="#overview" class="nl">关于我</a>
+    <a href="#assistant" class="nl">AI 问答</a>
+    <a href="#contact" class="nl">联系</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap heroflex">
+  <div class="heromain">
+  <h1>空杯心态，<em>永远努力</em></h1>
+  <p class="tagline">
+    <span>本科奖学金 10w+ · 硕士录取 LSE / LBS / NUS / Duke</span>
+    <span class="tlchain">
+      <span class="ch"><span class="chlg"><img src="assets/ey.png" alt="EY"></span><b>EY咨询</b></span>
+      <span class="ar">→</span>
+      <span class="ch"><span class="chlg"><img src="assets/jd.png" alt="京东"></span><b>京东电商</b></span>
+      <span class="ar">→</span>
+      <span class="ch"><span class="chlg"><img src="assets/tencent.png" alt="腾讯云"></span><b>腾讯云与AI</b></span>
+    </span>
+    <span class="tllife">抗压皮实，灵敏上进 · 多年海外与异地工作生活 · 习惯在挑战里长本事</span>
+  </p>
+</div>
+  <div class="portrait"><img src="assets/portrait-baked.png" alt="赵梓延 · 职业照"></div>
+  <div class="metrics">
+    <div class="metric"><div class="n">1<small> / 312</small></div><div class="l">全校第一 · 本科两年专业排名</div></div>
+    <div class="metric"><div class="n">4<small> 段</small></div><div class="l">创业 &amp; 头部公司实习</div></div>
+    <div class="metric"><div class="n">7.5<small> 雅思</small></div><div class="l">首考，口语 7.0 · 听阅 8.5</div></div>
+    <div class="metric"><div class="n">200<small>万+</small></div><div class="l">腾讯 · 独立拓客预估年消耗</div></div>
+  </div>
+  <div class="rolebar">
+    <div class="q">你是谁？</div>
+    <div class="opts" style="display:flex;gap:8px;flex-wrap:wrap">
+      <div class="chip" data-role="hr">招聘方</div>
+      <div class="chip" data-role="panel">答辩评委</div>
+      <div class="chip" data-role="peer">同行 / 朋友</div>
+    </div>
+  </div>
+  <div class="rolehint" id="rolehint">选一个身份，我会按你的关注点重新组织下面的内容。</div>
+</div></header>
+
+<section id="experience"><div class="wrap">
+  <div class="sechead"><span class="secnum">01</span><h2>经历深挖</h2><span class="en">Experience</span></div>
+  <div class="tlgroup">
+    <div class="tlghead"><span class="zh">教育背景</span><span class="en">Education</span><span class="ct">2 所 · 硕士 / 学士</span></div>
+    <div class="tl" id="tledu"></div>
+  </div>
+  <div class="tlgroup">
+    <div class="tlghead"><span class="zh">职业经历</span><span class="en">Professional</span><span class="ct">4 段 · 咨询 / 电商 / 云 / 创业</span></div>
+    <div class="tl" id="tlpro"></div>
+  </div>
+</div></section>
+
+<section id="capability" class="tinted"><div class="wrap">
+  <div class="sechead"><span class="secnum">02</span><h2>能力图谱</h2><span class="en">Capabilities</span></div>
+  <p class="secsub">六项能力：学习——入校全省最低分，两年后全校第一（1/312）；英语——雅思 7.5；抗压——独立拓客，北上港深与海外独立工作学习；AI——亲手搭了这个网页与自动化流程；数据——把「先打谁」算成可排序的名单；技术理解——非技术出身，在学。</p>
+  <div class="capviz">
+    <div class="radarbox">
+      <div class="rboxtitle">CAPABILITY RADAR · 能力六边形</div>
+      <svg id="radar" viewBox="0 0 520 372"></svg>
+    </div>
+    <div class="capside" id="capside"></div>
+  </div>
+
+  <div class="subhead"><span class="zh">能力 × 经历矩阵</span><span class="en">Capability × Experience Matrix</span><span class="ct">6 × 6 · 深浅 = 支撑强度</span></div>
+  <div class="mx">
+    <div class="mxscroll"><table class="mxtable" id="mxtable"></table></div>
+    <div class="mxscale">
+      <span>支撑强度</span>
+      <span><i style="background:#123A63"></i>强 · 核心证据在此</span>
+      <span><i style="background:#7FA8D4"></i>中 · 有明确结果</span>
+      <span><i style="background:#DCE8F6"></i>弱 · 有涉及</span>
+      <span><i style="background:#F4F7FB"></i>无直接证据</span>
+    </div>
+    <div class="mxtip" id="mxtip">把鼠标移到任意格子上：这里会显示这段经历对这项能力到底做了什么。<span class="em">点击格子，会自动选中该能力并展开对应的经历条目。</span></div>
+  </div>
+
+  <div class="subhead"><span class="zh">能力 ↔ 经历 双向索引</span><span class="en">Two-way Index</span><span class="ct">按能力查经历 / 按经历查能力</span></div>
+  <div class="capgrid">
+    <div class="caps" id="caps"></div>
+    <div class="expgrid" id="exps"></div>
+  </div>
+  <div class="evidence" id="evidence">
+    <div class="eh">EVIDENCE · 硬证据</div>
+    <div class="empty">选择一个能力或一段经历，这里会显示它的硬证据。</div>
+  </div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+  <div class="sechead"><span class="secnum">03</span><h2>我怎么做事</h2><span class="en">Approach</span></div>
+  <p class="secsub">三段式工作方法，每一步都挂着一个我做过的真实项目——不是方法论模板，是我实际做事的顺序。</p>
+  <div class="steps">
+    <div class="step">
+      <div class="no">01</div>
+      <h3>读信号：先立假设</h3>
+      <div class="en">READ THE SIGNAL</div>
+      <p>从政策、行业周期、竞品动向倒推客户必然会遇到的压力，在客户自己意识到之前先把假设立起来。没有假设的拜访只是聊天，问不出真需求。</p>
+      <div class="eg"><b>实例：</b>三大交易所信息披露新规 → 客户的 ESG 评级需求（安永：80 页服务方案 + 3 轮拜访）；AI 算力成本上升 → AIGC 影视工作室的 Token 与 GPU 需求（腾讯云）。</div>
+    </div>
+    <div class="step">
+      <div class="no">02</div>
+      <h3>现场验证：把假设打穿</h3>
+      <div class="en">TEST ON SITE</div>
+      <p>假设不等于需求。用多轮调研与拜访把假设打穿，直到客户承认这就是他的问题；同时把定性体感换算成定量口径，否则无法报价、也无法判断优先级。</p>
+      <div class="eg"><b>实例：</b>大湾区旅游业客户做了 4 轮调研才锁定客服质检与直播两个场景；AIGC 客户把「跑不动」拆成场景、调用量、成本三个可回答的问题。</div>
+    </div>
+    <div class="step">
+      <div class="no">03</div>
+      <h3>翻译成可买单方案，并推到产生消耗</h3>
+      <div class="en">TRANSLATE &amp; CLOSE</div>
+      <p>联合架构师与售前明确技术要求，组织 POC 与友商对标，选定商务路径后一路推到真正产生消耗，并跟完合同、结算与发票。</p>
+      <div class="eg"><b>实例：</b>AIGC 影视客户完成 Token Hub 接入、进入后付费跑量；字节火山云迁移推动管理层认可「存量优化为主、商务折扣为辅」。</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="media" class="tinted"><div class="wrap">
+  <div class="sechead"><span class="secnum">04</span><h2>自媒体与创业</h2><span class="en">Self-media &amp; Venture</span></div>
+  <p class="secsub">小红书「Capybara」共发布 24 篇笔记（2024.03 – 2026.07），实测累计获赞 10,195、收藏 3,008、评论 1,704、分享 1,793，粉丝 2,671；同期以 Backwards 工作室合伙人身份跑通内容—获客—签约—交付的完整闭环。</p>
+  <div class="kg">
+    <div class="kgc"><div class="n">24<small> 篇</small></div><div class="l">小红书笔记（实测抓取）</div></div>
+    <div class="kgc"><div class="n">10,195</div><div class="l">小红书累计获赞</div></div>
+    <div class="kgc"><div class="n">1,704</div><div class="l">小红书累计评论</div></div>
+    <div class="kgc"><div class="n">7万+</div><div class="l">工作室累计盈利（元）</div></div>
+  </div>
+  <div class="switch">
+    <div class="chip on" data-view="xhs">小红书实测</div>
+    <div class="chip" data-view="impact">多平台合计</div>
+    <div class="chip" data-view="biz">商业转化</div>
+  </div>
+  <div class="bars" id="bars"></div>
+  <p class="note">口径说明：「小红书实测」为 2026.09.20 逐篇抓取的 24 篇笔记实时数据；「多平台合计」为 2024.09–2025.09 小红书 + 校内平台合计（含阅读量估算）；「商业转化」含留学服务签约与线下课业辅导。条形宽度为组内示意，以右侧数值为准。</p>
+
+  <div class="subhead"><span class="zh">内容代表作</span><span class="en">Selected Notes</span><span class="ct">8 篇 · 按数据排序</span></div>
+  <div class="hlgrid" id="hlgrid"></div>
+
+  <div class="subhead"><span class="zh">我写下的话</span><span class="en">In My Own Words</span><span class="ct">原文引句</span></div>
+  <div class="voices" id="voices"></div>
+</div></section>
+
+<section id="overview"><div class="wrap">
+  <div class="sechead"><span class="secnum">05</span><h2>关于我</h2><span class="en">Profile</span></div>
+  <p class="secsub">前面讲的是我做成过什么，这一段讲我是谁：起点、几次关键取舍，以及我手上的工具。</p>
+  <div class="about">
+    <p>我是赵梓延。入校那年我是当年录取的全省高考最低分，英语跟不上，上课要靠翻译软件才听得懂——这是我的起点。四年后我从宁波诺丁汉大学经济学毕业：GPA 3.8/4.0，<b>两年专业第一 1/312</b>，英制一等荣誉学位，优秀毕业生；期间以全校第一的成绩<b>免学费赴英国伯明翰大学交换</b>，累计本科奖学金 10 万，是学校宣传人物。</p>
+    <p>硕士就读于伦敦政治经济学院（LSE）管理学，同期录取 LBS、NUS、Duke，获研究生奖学金 8 万元。选校不看排名看筛选成本：LBS 在国内除头部金融与咨询外认知度有限，中外合办本科需要一个无需额外解释的学校名称。</p>
+    <p>职业上我走过三条线：安永可持续战略咨询（上海所 &amp; 北京所，9 个月）、京东零售电商运营采销（北京总部）、腾讯云技术产品商务培训生（深圳总部，在岗）。三条线的共同点是——<b>都在做同一件事：从混乱的信息里挖出真实需求，然后推动它落地。</b></p>
+    <p>AI 不是我的副业，是我的工作方式。在京东我用 JoyClaw AI 搭自动化流程，把数据提取和分析效率提了 60% 以上；在腾讯云我卖的就是 AI——<b>独立完成 AIGC 影视工作室的 Token 与 GPU 商机挖掘</b>，推动其完成 Token Hub 接入、进入后付费跑量阶段；独立开拓的客户合计预估年消耗 200 万+（口径：按当前调用量与采购意向回推，非报价）。</p>
+  </div>
+  <div class="toolgrp">AI &amp; AUTOMATION</div>
+  <div class="tools">
+    <div class="chip">Workbuddy</div><div class="chip">Codex</div><div class="chip">AI Agent 工作流</div>
+    <div class="chip">Prompt Engineering</div><div class="chip">Gamma</div><div class="chip">NotebookLM</div><div class="chip">京东 JoyClaw AI</div>
+  </div>
+  <div class="toolgrp">DATA &amp; ANALYSIS</div>
+  <div class="tools">
+    <div class="chip">Excel 高级函数 / 数据透视</div><div class="chip">Stata</div><div class="chip">easyBI</div>
+    <div class="chip">黄金眼</div><div class="chip">PPT 与数据可视化</div>
+  </div>
+  <div class="toolgrp">LANGUAGE &amp; CERTIFICATION</div>
+  <div class="tools">
+    <div class="chip">雅思 7.5（口语 7.0）</div><div class="chip">全英文工作经验</div><div class="chip">腾讯云从业者资格证</div>
+  </div>
+</div></section>
+
+<section id="assistant" class="tinted"><div class="wrap">
+  <div class="sechead"><span class="secnum">06</span><h2>AI 问答 · 随便问</h2><span class="en">Ask me anything</span></div>
+  <p class="secsub">这个模块背后是一份关于我经历的结构化知识库，支持关键词检索。</p>
+  <div class="askbox">
+    <div class="askrow">
+      <input id="q" type="text" placeholder="例如：AIGC 影视那个项目具体怎么做的？">
+      <button onclick="ask()">提问</button>
+    </div>
+    <div class="sugg" id="sugg"></div>
+    <div class="answer" id="answer"></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="sechead"><span class="secnum">07</span><h2>联系</h2><span class="en">Contact</span></div>
+  <p class="secsub">欢迎就任何一段经历追问细节，我可以展开讲。</p>
+  <div class="contact">
+    <div><div class="k">PHONE / WECHAT</div><div class="v">18988401676</div></div>
+    <div><div class="k">EMAIL</div><div class="v">zzyzzy921921@outlook.com</div></div>
+    <div><div class="k">LINKEDIN</div><div class="v">linkedin.com/in/ziyan-zhao-4540ab283</div></div>
+  </div>
+  <div class="contact" style="margin-top:20px">
+    <div><div class="k">XIAOHONGSHU</div><div class="v">Capybara · 小红书号 7795455099</div></div>
+    <div><div class="k">EDUCATION</div><div class="v">LSE 管理学硕士在读 · UNNC 经济学学士一等荣誉</div></div>
+    <div><div class="k">LOCATION</div><div class="v">深圳（腾讯云总部）· 可出差</div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>赵梓延 · 技术产品商务</div>
+  <div>本页面由本人独立完成，含交互逻辑与 AI 问答模块</div>
+</div></footer>
+
+<script>
+var LOGOS={
+ tc:'<img src="assets/tencent.png" alt="Tencent">',
+ jd:'<img src="assets/jd.png" alt="JD.com">',
+ ey:'<img src="assets/ey.png" alt="EY">',
+ lse:'<img src="assets/lse.png" alt="LSE">',
+ unc:'<img src="assets/unnc2.jpg" alt="University of Nottingham Ningbo China">',
+ md:'<img src="assets/xhs/xhs-profile.jpg" class="mdlogo" data-cap="小红书主页 · Capybara｜2,671 粉丝 · 获赞与收藏 1.3 万" alt="小红书主页" title="小红书主页 · 点击放大">',
+ edu:'<svg width="38" height="38" viewBox="0 0 40 40"><path d="M4 17 L20 9 L36 17 L20 25 Z" fill="#0A2240"/><path d="M30 19.5 V27 c0 2.5-4.5 4.5-10 4.5 s-10-2-10-4.5 v-7.5" stroke="#0A2240" stroke-width="1.6" fill="none"/></svg>'
+};
+
+var CAPS=[
+ {id:"learn",t:"学习能力",e:"LEARNING AGILITY"},
+ {id:"eng",t:"英语与跨文化",e:"ENGLISH &amp; CROSS-CULTURAL"},
+ {id:"ai",t:"AI 与工具应用",e:"AI &amp; TOOLING"},
+ {id:"data",t:"数据分析与判断",e:"DATA &amp; JUDGEMENT"},
+ {id:"resi",t:"抗压与多线交付",e:"RESILIENCE &amp; MULTI-TRACK"},
+ {id:"tech",t:"技术理解深度",e:"TECHNICAL DEPTH"}
+];
+var EXPS=[
+ {id:"tc",t:"腾讯云",d:"技术产品商务 · 深圳",lg:"tc"},
+ {id:"jd",t:"京东",d:"电商运营采销 · 北京",lg:"jd"},
+ {id:"ey",t:"安永",d:"可持续战略咨询 · 沪京",lg:"ey"},
+ {id:"md",t:"自媒体 / 工作室",d:"合伙人 · 商务拓展",lg:"md"},
+ {id:"lse",t:"伦敦政治经济学院",d:"管理学硕士 · 伦敦",lg:"lse"},
+ {id:"unc",t:"宁波诺丁汉大学",d:"经济学学士 · 宁波",lg:"unc"}
+];
+var MXCOLS=[{id:"tc",s:"腾讯"},{id:"jd",s:"京东"},{id:"ey",s:"安永"},{id:"md",s:"工作室"},{id:"lse",s:"LSE"},{id:"unc",s:"宁诺"}];
+var ACCENT={tc:["#0052D9","#EEF4FF"],jd:["#C8161D","#FDEEEF"],ey:["#8A6D00","#FBF6E6"],md:["#D4234A","#FDEDF0"],lse:["#6B2D6B","#F4EEF4"],unc:["#1E4E9C","#EDF2FB"]};
+var MATRIX={
+ learn:{unc:3,lse:2,ey:2,jd:2,tc:2,md:2},
+ eng:  {unc:3,lse:3,ey:3,jd:0,tc:2,md:1},
+ ai:   {unc:0,lse:1,ey:0,jd:3,tc:3,md:0},
+ data: {unc:1,lse:2,ey:2,jd:3,tc:3,md:2},
+ resi: {unc:3,lse:3,ey:3,jd:3,tc:3,md:2},
+ tech: {unc:0,lse:0,ey:0,jd:1,tc:2,md:0}
+};
+var MNOTE={
+ "learn|unc":"入校时是当年录取的全省最低分、上课要靠翻译软件，两年后专业第 1（1/312）——学习这件事我不是靠时间堆出来的",
+ "learn|lse":"全英文硕士项目，快速补齐管理学与战略的分析框架",
+ "learn|ey":"从零上手 CDP、DJSI、EcoVadis、MSCI 等国际评级口径，9 个月内能独立跟进客户报告",
+ "learn|jd":"两周内从零上手黄金眼、easyBI、通天塔后台，并把品类周报做成自动化流程",
+ "learn|tc":"两个月内自学云与 AI 产品口径（Token、GPU、Workbuddy），现在能独立做客户量级测算",
+ "learn|md":"从零学内容运营与转化：24 篇笔记做到 130+ 潜在客户，选题与方法全是自己试出来的",
+ "eng|unc":"全英文教学环境，以免对方学费的方式赴伯明翰大学交换并加入当地学生组织",
+ "eng|lse":"全英文硕士项目，与来自多个国家的同学组队完成案例分析与汇报",
+ "eng|ey":"全英文填报 CDP、DJSI、EcoVadis、MSCI 等国际评级并撰写 ESG 报告，参与能源、餐饮行业高层访谈、整理纪要 17 份",
+ "eng|tc":"腾讯 7 轮流程含 AI 英语面；客户现场与架构师、售前、管理层多方对齐，把技术语言翻成业务语言",
+ "eng|md":"内容面向留学生与家长，英文材料与英文沟通是日常",
+ "ai|jd":"用 JoyClaw AI 搭自动化流程做品类周报，数据提取和分析效率提高 60% 以上",
+ "ai|tc":"卖的就是 AI：独立发掘 Token 与 Workbuddy 企业版需求，把业务场景换算成调用量级；持腾讯云从业者资格证",
+ "ai|lse":"课程作业与案例研究中用数据分析与 AI 工具辅助产出",
+ "data|jd":"用近两年 GMV、广告费率、建联情况做加权分层，筛出各地区 Top 50 鞋靴商家，把先打谁变成可排序名单，并做每周看板追踪",
+ "data|tc":"把客户一句跑不动换算成 Token 调用量级与 GPU 算力假设；触达 15+ 关键人、独立拓展跟进有效商机 25+ 并逐家判断量级",
+ "data|ey":"对福利蛋供应商做规模分析，产出 30 页可行性报告及分析图",
+ "data|lse":"硕士课程中的定量分析与战略案例训练",
+ "data|md":"内容是数据驱动的：单篇最高 2,736 赞 / 1,191 收藏，靠复盘选题与发布时间把互动做上去",
+ "data|unc":"经济学训练打底：计量与统计课程、全英文教材",
+ "resi|ey":"9 个月跨沪京两地，并行 6 家客户 ESG 报告撰写、80 页 BD 方案与北京 / 深圳 / 天津 / 昆明 4 场客户会",
+ "resi|jd":"日均处理上品 2000+、连续两个月，同时并行商家建联、团长合作与品类周报",
+ "resi|tc":"并行推教育科技、大湾区旅游业、字节迁移三条线，并跟完合同、结算与发票",
+ "resi|unc":"专业第一的同时并行三个社团、英辩、三场话剧、云南支教与微电影",
+ "resi|lse":"硕士在读期间在伦敦、北京、深圳三地连续切换，完成京东与腾讯两段全职实习",
+ "resi|md":"12 个月兼顾学业与创业，开拓潜在客户 130+、盈利超过 7 万元",
+ "tech|tc":"能把 AI 产品讲到业务价值与量级层（Token / GPU 消耗怎么算），但架构选型与参数配置仍由架构师主导，我在旁边学、当场记",
+ "tech|jd":"用的是黄金眼、easyBI、通天塔等工具层与线上会场搭建，不涉及系统架构"
+};
+var RADAR=[
+ {id:"learn",now:95},
+ {id:"eng",  now:93},
+ {id:"ai",   now:70},
+ {id:"data", now:65},
+ {id:"resi", now:94},
+ {id:"tech", now:48}
+];
+var CAPDEF={
+ learn:"入校全省录取最低分，两年后全校第一（1/312）。",
+ eng:"雅思 7.5，首考；全英文完成学业、国际评级填报与客户沟通。",
+ ai:"亲手搭了这个网页；在京东用 AI 搭自动化流程，效率提升 60%+。",
+ data:"把「先打谁」算成可排序的名单：京东 Top 50 分层、腾讯商机量级测算。",
+ resi:"独立拓客；北上港深与海外独立工作学习；不断尝试新机会。",
+ tech:"非技术出身，在学：已考取腾讯云从业者资格证。"
+};
+var UPLIFT={
+ learn:"把不懂的拆成能验证的小问题，再沉淀成流程。",
+ eng:"英文材料优先；目标一年内口语 7.5+。",
+ ai:"工作流持续 AI 化；把腾讯云 AI 新能力翻译成客户场景。",
+ data:"补 SQL 与 BI；每次判断留可复核的测算表。",
+ resi:"日颗粒度清单；每条线先定最低交付，再争取增量。",
+ tech:"已考腾讯云从业者资格证；跟架构师陪访、走完整技术链路。"
+};
+var GAP={
+ tech:"非技术出身，架构层仍依赖架构师。正在补：资格证之外，跟架构师陪访、当场记要点、会后复述。"
+};
+var RADMAP={};RADAR.forEach(function(r){RADMAP[r.id]=r});
+var REL={};
+CAPS.forEach(function(c){
+  REL[c.id]=MXCOLS.filter(function(e){return (MATRIX[c.id][e.id]||0)>=2;}).map(function(e){return e.id;});
+});
+var CAPNAME={};CAPS.forEach(function(c){CAPNAME[c.id]=c.t});
+var EXPNAME={};EXPS.forEach(function(e){EXPNAME[e.id]=e.t});
+var EVID={
+ learn:[
+  "宁波诺丁汉：入校为当年录取全省最低分、上课靠翻译软件，两年后两年专业第 1（1/312）、GPA 3.8/4.0、英制一等荣誉学位",
+  "雅思首考 7.5（听阅 8.5）：单词量与阅读量优先，考前一周每天保持手感，方法先于时间",
+  "京东：两周内从零上手黄金眼、easyBI、通天塔后台，并用 JoyClaw AI 把品类周报自动化，数据分析效率提升 60%+",
+  "腾讯云：两个月内自学云与 AI 产品口径（Token、GPU、Workbuddy），已能独立做客户量级测算；持腾讯云从业者资格证"
+ ],
+ eng:[
+  "雅思 7.5（口语 7.0），首考，听阅 8.5",
+  "安永：全英文填报 CDP、DJSI、EcoVadis、MSCI 等国际评级并撰写 ESG 报告",
+  "LSE：全英文硕士项目，与多国同学组队完成案例分析与汇报",
+  "腾讯 7 轮流程含 AI 英语面；宁诺期间以免对方学费赴英国伯明翰大学交换并加入当地学生组织"
+ ],
+ ai:[
+  "京东：用 JoyClaw AI 搭自动化流程做鞋靴品类周报，数据提取和分析效率提高 60% 以上",
+  "腾讯云：独立发掘教育科技公司 Token 与 Workbuddy 企业版 AI 部署需求——卖的产品本身就是 AI 工作流",
+  "工具：Workbuddy、Codex、AI Agent 工作流、Prompt Engineering、Gamma、NotebookLM；持腾讯云从业者资格证",
+  "本网页：含交互、能力矩阵与 AI 问答模块，从 0 到 1 自己搭建"
+ ],
+ data:[
+  "京东：输入近两年 GMV、广告费率、建联情况做加权分层，筛出各地区 Top 50 鞋靴商家，把先打谁变成可排序名单，并做每周统一看板追踪",
+  "腾讯云：把客户一句跑不动换算成 Token 调用量级与 GPU 算力假设，据此判断商机量级与优先级",
+  "腾讯云：字节火山云迁移调研，判断真实诉求是降本 + 迁移稳定，把方案拆成存量优化为主、商务折扣为辅并说服管理层",
+  "腾讯云：累计触达 15+ 企业关键人、独立拓展跟进有效商机 25+，逐家判断需求真实性与量级"
+ ],
+ resi:[
+  "安永：9 个月跨沪京两地，并行 6 家客户 ESG 报告撰写、80 页 BD 方案与北京 / 深圳 / 天津 / 昆明 4 场客户会",
+  "京东：日均处理上品 2000+、连续两个月，同时并行商家建联、团长合作与品类周报",
+  "硕士在读期间在伦敦、北京、深圳三地连续切换，完成京东与腾讯两段全职实习，同时完成学业",
+  "自媒体：12 个月兼顾学业与创业，开拓潜在客户 130+、盈利超过 7 万元"
+ ],
+ tech:[
+  "腾讯云：已能独立完成业务侧量级测算与价值论证（AIGC 客户从商机挖掘到 Token Hub 接入跑量），但架构与参数层由架构师主导",
+  "腾讯云：旅游业项目中协同架构师明确技术要求，引入 ASR 客服质检与 TUILiveKit 直播方案，我负责场景梳理与真实语料 POC 组织",
+  "资质：持腾讯云从业者资格证（基础级），尚未取得解决方案架构师级别的认证",
+  "诚实口径：京东阶段使用的是黄金眼、easyBI、通天塔等工具层与线上会场搭建，不涉及系统架构"
+ ]
+};
+var TL=[
+ {id:"tc",lg:"tc",grp:"pro",ttl:"腾讯云 · 技术产品商务培训生（云与 AI 产品）<span class='casetag'>CASE STUDY · AIGC 影视客户</span>",meta:"云与智慧产业事业群 · 深圳总部 · 2026.07 – 至今",live:[["tc-welcome.jpg","WELCOME TO TENCENT"]],
+  hook:"从客户一句「跑不动」到独立拓客预计年消耗 200 万+：AIGC 影视、教育科技、旅游业三条线并行推进",
+  mini:[["200万+","独立拓客预估年消耗"],["25+","独立拓展跟进有效商机"],["15+","触达企业关键人"]],hl:true,
+  sar:[["背景", "腾讯云与智慧产业事业群技术产品商务培训生（云与 AI 产品），深圳总部，2026.07 起在岗。这份工作不是接需求，而是在客户自己还没想清楚的阶段把需求定义出来，再一路推到产生消耗。"], ["行动 · 盘面", "渠道上，通过线索池、行业会议、熟人引荐累计触达 15+ 企业关键人，独立拓展并跟进有效商机 25+，逐家判断云、Token、Workbuddy 等 AI 需求的真实性与量级。项目上并行推三条线：① 独立发掘教育科技公司 Token 与 Workbuddy 企业版 AI 部署需求；② 对大湾区旅游业客户完成 4 轮调研与拜访，协同架构师明确业务场景与技术要求，引入 ASR 客服质检方案与 TUILiveKit 直播应用，组织真实语料 POC 及友商方案对标；③ 驻场北京客户公司做字节火山云→腾讯云降费迁移调研。"], ["CASE STUDY · 场景", "客户是做 AI 影视生成的工作室，业务在扩张，模型调用量持续上涨。第一次沟通时他们对腾讯云没有采购清单，只有一个模糊体感——跑不动：生成排队、算力不够、成本说不清。这类客户最难的地方在于，他自己也不知道该买什么，量的口径也没有。"], ["CASE STUDY · 我的处理", "我没有先报价，而是先做需求澄清：把「跑不动」拆成三个客户能回答的问题——哪些业务环节在调用模型、单次调用大致消耗多少 Token、算力峰值出现在哪个阶段。再把客户对成本的不确定，换成一组可测算的量级假设，据此判断这是一个 Token 持续消耗叠加 GPU 算力的商机，而不是一次性采购。需求明确后联动技术侧完成 Token Hub 接入，并采用后付费方式降低启动门槛。"], ["CASE STUDY · 结果", "客户已完成 Token Hub 接入，进入后付费跑量阶段。从第一次沟通到产生消耗，链路上的每一环——挖掘、判断、接入、跑量——都由我独立推完。"], ["商务判断力 · 字节火山云迁移", "字节火山云迁移这条不是执行活。客户表面要的是折扣，调研后我判断真实诉求是降本 + 迁移稳定——只靠商务折扣，成本降不下来且迁移风险无人兜底。据此把方案锚定为存量优化（资源治理、架构调整）为主、商务折扣为辅，驻场北京组织 6 场跨团队对齐会，最终让客户管理层认可了这个顺序：先让客户接受更正确的路径，而不是先让价。"], ["结果 · 整体", "独立开拓的客户合计预计年消耗 200 万+：其中 AIGC 影视客户完成 Token Hub 接入、进入后付费跑量；教育科技客户 Token 与 Workbuddy 企业版部署、旅游业 SaaS 项目进入选型阶段；字节客户管理层认可「存量优化为主、商务折扣为辅」的降本迁移策略。同时跟进合同签订与修改、结算与发票流程，规避回款风险。"], ["为什么重要", "三个能力在这段经历里同时被验证：客户说不清时能把需求挖出来；能把 AI 产品翻译成客户听得懂、算得清账的方案；能靠对齐会而非职权跨团队推动。消耗量级是客户已经开始消耗之后回推出来的，不是报价。"]],
+  kpi:[["200万+", "独立拓客预估年消耗（合计）"], ["15+", "触达企业关键人"], ["25+", "独立拓展跟进有效商机"], ["6", "跨团队对齐会"], ["4", "旅游业客户调研轮次"]],shots:[["tc-offer.jpg","腾讯 Offer 通知"],["tc-welcome.jpg","WELCOME TO TENCENT"]]},
+ {id:"jd",lg:"jd",grp:"pro",ttl:"京东 · 电商运营（采销）暑期实习生",meta:"零售 · 北京总部 · 2026.05 – 2026.07",live:[["jd-badge.jpg","京东零售 · 大时尚事业群 工牌"]],
+  hook:"两个月把 CPS 渠道从 0 跑到单周 900+ 单，GMV 环比 +600%",
+  mini:[["900+","爆款单周销量"],["600%+","GMV 环比"]],hl:false,
+  sar:[["背景", "京东零售电商运营（采销）暑期实习生，北京总部，负责鞋靴品类。接手时两个问题很明确：商家多但不知道先打谁，渠道有但没跑通。"], ["行动", "先解决优先级：用 JoyClaw AI 输入近两年 GMV、广告费率、建联情况做加权分层，筛出各地区 Top 50 鞋靴商家，再按 GMV、同环比、动销率做潜力分析并做每周统一看板追踪。再解决渠道：对 Top 50 中未建联商家多渠道建联，同时直接建联 100+ CPS 团长、完成 150 例商品渠道销售，并把过程沉淀成合作 SOP、爆款商品库与话术，逐个记录团长的选品偏好与链接要求。同时跟进京喜自营商家入驻、选品、上品全流程，并对 30+ 商家做动销率提升培训。"], ["结果", "建联 27 家、可控 12 家；爆款拖鞋一周两次合作卖出 900+ 单，GMV 环比上周增长 600% 以上；培训后低质量上品减少 40%；用 AI 搭自动化流程做品类周报，数据提取和分析效率提高 60% 以上；日均处理上品 2000+。"]],
+  kpi:[["27", "商家建联（可控 12）"], ["900+", "爆款单周销量"], ["600%+", "GMV 环比增长"], ["60%+", "数据分析效率提升"], ["2000+", "日均处理上品"]],shots:[["jd-badge.jpg","京东零售 · 大时尚事业群 工牌"],["jd-live.jpg","鞋靴品类直播，单场 51.9 万观看"]]},
+ {id:"ey",lg:"ey",grp:"pro",ttl:"安永 · 可持续战略咨询实习生",meta:"咨询线 · 上海所 &amp; 北京所 · 2024.06 – 2025.03",live:[["ey-solo.jpg","安永北京 · EY 立牌单人照"]],
+  hook:"9 个月跨沪京两地：6 家客户 ESG 报告与 80 页 BD 方案并行推进",
+  mini:[["80 页","BD 服务方案"],["100+","客户邀约"]],hl:false,
+  sar:[["背景", "安永咨询线可持续战略组实习生，上海所 & 北京所，2024.06–2025.03。同时背着交付与 BD 两条线：一边是客户正在等的评级填报和报告，一边是还没发生的商机。"], ["行动", "交付侧：参与多家公司资本市场评级提升项目，填报 CDP、DJSI、EcoVadis、MSCI 等第三方 ESG 评级；参与头部国际食品公司供应链转型项目，对福利蛋供应商做规模分析并产出 30 页可行性报告及分析图；跟进 6 家客户 ESG 报告撰写。BD 侧：在三大交易所信息披露新规背景下，整理潜在客户国内外业务面临的气候变化披露政策要求，输出 80 页服务方案 PPT（含需求理解、标杆案例、数据分析材料、方案可视化图表），参与 3 轮客户拜访并现场展示。"], ["结果", "协助组织北京、深圳、天津、昆明 4 场客户会，通过公开信息、CRM 系统等多渠道邀约 100+ 潜在客户参会并协助现场接待；参与能源、餐饮等行业高层访谈，整理评级提升目标与可持续战略会议纪要 17 份。"]],
+  kpi:[["6", "客户 ESG 报告"], ["80页", "服务方案 PPT"], ["100+", "潜在客户邀约"], ["17", "高层访谈纪要"], ["30页", "可行性报告"]],shots:[["ey-intern.jpg","安永暑期实习录用（CCaSS）"],["ey-office.jpg","安永北京分公司"]]},
+ {id:"md",lg:"md",grp:"pro",ttl:"Backwards 工作室 · 合伙人 &amp; 商务拓展",meta:"小红书「Capybara」· 线上 &amp; 宁波 · 2024.09 – 2025.09",live:[],
+  hook:"零投放预算：24 篇笔记 → 130+ 潜在客户 → 7 万+ 盈利",
+  mini:[["10,195","小红书累计获赞"],["130+","潜在客户"]],hl:false,
+  sar:[["背景", "小红书「Capybara」+ Backwards 工作室合伙人（2024.09–2025.09），做留学服务与线下课业辅导。启动时的约束很硬：没有投放预算，只有内容这一条路。"], ["行动", "经营小红书与校内平台打造人设并持续输出内容，把内容流量导向私域，自己做咨询与转化，线下承接课业辅导完成交付。内容分四类：实习与职场实录、升学申请、校园成长、留学日常。"], ["结果", "小红书账号共发布 24 篇笔记（2024.03–2026.07），实测累计获赞 10,195、收藏 3,008、评论 1,704、分享 1,793，粉丝 2,671；多平台推文点赞 2.3 万+、阅读量 30 万+。商业侧一年内开拓潜在客户 130+，留学意向签约客户 40+，线下辅导客户 15+，盈利超过 7 万元——完整跑通内容→获客→签约→交付。"]],
+  kpi:[["24", "小红书笔记（篇）"], ["10,195", "小红书累计获赞"], ["30万+", "多平台阅读量"], ["130+", "开拓潜在客户"], ["7万+", "累计盈利（元）"]],shots:[["hl-ey.jpg","《第一段咨询实习结束啦》封面"],["hl-lbs.jpg","《从宁诺前 1% 到 LBS 录取》封面"]]},
+ {id:"lse",lg:"lse",grp:"edu",ttl:"伦敦政治经济学院 · 管理学硕士",meta:"LSE · 伦敦 · 2025.10 – 2026.11",live:[["lse-offer.jpg","LSE 录取 · Department of Management"]],
+  hook:"同期录取 LBS / NUS / Duke",
+  mini:[["8万","研究生奖学金"],["3","同期其他录取"]],hl:false,
+  sar:[["院校", "伦敦政治经济学院（LSE）管理学硕士，2025.10–2026.11，获研究生奖学金 8 万元。"], ["录取", "同期还拿到伦敦商学院（LBS）、新加坡国立大学（NUS）、杜克大学（Duke）的录取。"], ["取舍", "LBS 是当季排名最高的录取，但国内除头部金融与咨询外认知度有限；本科为中外合办，求职筛选中需要一个无需额外解释的学校名称。比较筛选成本后选定 LSE，决策依据当时已公开记录。"], ["说明", "全英文授课环境，与来自多个国家的同学组队完成案例分析与汇报；同期在伦敦、北京、深圳三地连续切换，完成京东与腾讯两段全职实习。"]],
+  kpi:[["LSE", "管理学硕士"], ["3", "同期其他录取（LBS/NUS/Duke）"], ["8万", "研究生奖学金（元）"], ["7.5", "雅思（口语 7.0）"]],shots:[["lse-msc.jpg","LSE 管理学与战略硕士（M&S）"],["lse-offer.jpg","LSE 录取通知"],["lse-welcome.jpg","LSE 入学"]]},
+ {id:"unnc",lg:"unc",grp:"edu",ttl:"宁波诺丁汉大学 · 经济学学士",meta:"UNNC · 宁波 · 2021.09 – 2025.07（含伯明翰大学交换）",live:[["unnc-sky.jpg","宁波诺丁汉 · 校园"]],
+  hook:"入校为当年录取最低分；毕业时两年专业第 1（1/312）、英制一等荣誉学位",
+  mini:[["1/312","专业排名"],["3.8/4.0","GPA"]],hl:false,
+  sar:[["本科", "宁波诺丁汉大学经济学学士（2021.09–2025.07），GPA 3.8/4.0，两年专业第 1（1/312），英制一等荣誉学位，优秀毕业生。"], ["起点", "入校时为当年录取的全省高考最低分，上课初期依赖翻译软件。两年后拿到专业前 1%、3.5 万校长奖学金、雅思首考 7.5（听阅 8.5），并以免对方学费的方式赴英国伯明翰大学交换（2023.09–2024.03）。"], ["荣誉", "本科两届校长奖学金（Top 1%）、浙江省政府奖学金、宁波市奖学金等累计 10 万元；校园宣传人物，参与 20 周年校庆演出与院校宣传片拍摄。"], ["增量", "三年里并行的事：三个社团、英辩、三场话剧（其中一次为大型话剧男主角）、云南支教、微电影、伯明翰当地学生组织与露营。"]],
+  kpi:[["1/312", "本科两年专业排名"], ["3.8/4.0", "GPA"], ["10万", "本科奖学金（元）"], ["7.5", "雅思（口语 7.0）"]],shots:[["unnc-scholarship.jpg","校长奖学金证书 · Academic Excellence"],["ielts.jpg","雅思首考成绩单：总分 7.5，听阅 8.5"],["unnc-awards.jpg","本科奖学金累计 10 万+"]]}
+];
+
+var VIEWS={
+ xhs:[["累计获赞","10,195",100],["累计收藏","3,008",30],["累计评论","1,704",17],["累计分享","1,793",18],["发布笔记数","24 篇",14],["粉丝数","2,671",26]],
+ impact:[["累计曝光（阅读量）","30万+",100],["累计互动（点赞量）","2.3万+",72]],
+ biz:[["开拓潜在客户","130+",100],["留学意向签约","40+",78],["线下辅导客户","15+",56]]
+};
+
+var HIGHLIGHTS=[{"title": "第一段咨询实习结束啦", "img": "hl-ey.jpg", "date": "2024-08-31", "like": "2736", "collect": "1191", "comment": "286", "why": "全账号单篇最高；实习复盘而非流水账，评论区沉淀为同行交流"}, {"title": "宁诺｜年级Top 1%，或许我终于可以谈谈UNNC", "img": "hl-unnc.jpg", "date": "2024-07-11", "like": "1305", "collect": "518", "comment": "211", "why": "1305 赞 518 藏；写清这所学校适合谁、不适合谁，含反面意见"}, {"title": "大学结束啦", "img": "unnc-awards.jpg", "date": "2025-05-22", "like": "915", "collect": "101", "comment": "106", "why": "全省最低分入校到优秀毕业生毕业的完整复盘"}, {"title": "四大咨询Summer Intern｜实习记录", "img": "hl-ey2.jpg", "date": "2024-06-28", "like": "715", "collect": "233", "comment": "101", "why": "715 赞 233 藏；第一个月的日常细节记录，信息密度高于结论"}, {"title": "日薪400+的京东暑期实习结束啦", "img": "hl-jd.jpg", "date": "2026-07-12", "like": "667", "collect": "121", "comment": "61", "why": "公开放弃转正的决策依据与测算过程"}, {"title": "从宁诺的年级前1%到LBS录取，但……", "img": "hl-lbs.jpg", "date": "2025-03-15", "like": "376", "collect": "143", "comment": "256", "why": "选校决策完整拆解，256 条评论构成主要互动"}, {"title": "🐧腾讯暑期Offer！（可内推伯乐码帮查进度）", "img": "tc-offer.jpg", "date": "2026-07-19", "like": "303", "collect": "49", "comment": "82", "why": "7 轮流程进腾讯，过程整理为可复用的面经"}, {"title": "可我大学三年，从不只是奖学金和名企实习", "img": "hl-more.jpg", "date": "2024-08-25", "like": "222", "collect": "38", "comment": "29", "why": "奖学金与实习之外的社团、话剧、支教记录"}];
+var VOICES=[{"quote": "最重要的是在这里，未来真的掌握在你自己手上，努力学习和积极尝试会直接为你带来回报。", "from": "宁诺｜年级Top 1%，或许我终于可以谈谈UNNC", "date": "2024-07-11", "note": "归因风格：只盯可控变量"}, {"quote": "面对目前的就业和社会环境，即使是非常功利的规划和努力也未必能保证好的结果。我们更应该去认真做好自己想做的事，即使它们看似“没有意义”。", "from": "可我大学三年，从不只是奖学金和名企实习", "date": "2024-08-25", "note": "回报不确定时，投入标准不下调"}, {"quote": "在过去的人生中我时常后悔，但大学这四年真的没有什么遗憾，我已经做到了自己的最好，即使重来一次我也不可能有更好的选择。", "from": "大学结束啦", "date": "2025-05-22", "note": "结算标准：不后悔，而非数字"}, {"quote": "对于大多数行业来说，中外合办本+lbs的搭配解释成本真的可能很高，高到会失去很多原本选择ic lse或者nus硕会有的机会。", "from": "从宁诺的年级前1%到LBS录取，但……", "date": "2025-03-15", "note": "决策方式：把虚名折算成筛选风险再下判断"}, {"quote": "面试真的不要卑微或者紧绷。把自己位置放的过低反而会传达出危险信号，毕竟这可能说明你自己都觉得能力配不上面试岗位。", "from": "🐧腾讯暑期Offer！（可内推伯乐码帮查进度）", "date": "2026-07-19", "note": "沟通姿态：代表方案，不代表姿态"}, {"quote": "放弃目前待遇很不错的转正，去尝试全新岗位肯定会很卷很难，但自己还是不想因为错过后悔。", "from": "日薪400+的京东暑期实习结束啦", "date": "2026-07-12", "note": "机会成本：方向优先于待遇，代价可承受"}];
+
+var KB=[
+ {kw:["aigc", "影视", "token", "gpu", "跑量", "hub", "案例", "过程"],a:"客户是 AI 影视生成工作室，初次沟通时没有采购清单，只有一句跑不动。我没先报价，而是做需求澄清——哪些环节在调用模型、单次调用大致消耗多少 Token、算力峰值出现在哪，把模糊算力诉求拆成可测算的量级假设，据此判断这是 Token 叠加 GPU 算力的商机。随后联动技术侧完成 Token Hub 接入，客户进入后付费跑量。"},
+ {kw:["业绩", "200万", "做了多少", "成果", "数字", "kpi", "消耗合计", "口径"],a:"口径先说清楚：200 万+ 是我独立开拓的多个客户，按当前调用量与采购意向回推的合计预估年消耗；其中跑得最透的是 AIGC 影视客户，已完成 Token Hub 接入、进入后付费跑量。这个数字是客户开始消耗之后回推的量级，不是报价、也不是已确认的签约金额——被追问时我直接这么讲。"},
+ {kw:["难点", "卡点", "怎么挖", "为什么能成", "说服力", "追问"],a:"难点是客户自己不知道要买什么，量级口径也没有，报价无从谈起。我的处理是先不谈产品、只谈业务：把跑不动拆成场景、调用量、成本三个客户能回答的问题，用他的业务增长倒推消耗量级，再把它变成双方都认的假设。客户认可了假设，接入和后付费就是顺理成章。量级口径是客户开始消耗之后回推出来的，不是报价，可以按月核对。"},
+ {kw:["腾讯", "岗位", "技术产品商务", "做什么", "职责", "理解"],a:"技术产品商务不是销售执行，是把云与 AI 产品翻译成客户算得清账的方案，并对商机负责到底。我的日常是：从线索池、行业会议、熟人引荐找到关键人，判断其云与 AI 需求是否真实、量级多大，再协同架构师与售前把方案做实，最后跟进合同、结算与发票。判断力是这个岗位的核心，因为商务的时间是稀缺资源。"},
+ {kw:["拜访", "关键人", "线索", "15", "25", "商机", "盘面"],a:"通过线索池、行业会议、熟人引荐等渠道累计触达 15+ 企业关键人，独立拓展并跟进有效商机 25+。每次接触我先问业务现状，再判断需求真实性与量级，而不是先介绍产品。其中跑出来的典型是 AIGC 影视工作室（已完成 Token Hub 接入并进入后付费跑量）和教育科技公司（Token 与 Workbuddy 企业版 AI 部署需求）。"},
+ {kw:["旅游", "旅游业", "saas", "asr", "直播", "tuilivekit", "poc", "大湾区", "选型"],a:"大湾区某旅游业客户，我做了 4 轮调研与拜访，从一堆模糊诉求里挖出客服质检和直播两个真实场景，协同架构师明确业务场景与技术要求，随后引入 ASR 客服质检方案与腾讯云 TUILiveKit 直播应用，组织真实语料 POC 及友商方案对标，目前项目进入选型阶段。这条线的价值是验证我能把需求翻译成技术侧可交付的规格。"},
+ {kw:["字节", "火山云", "迁移", "降本", "6场", "对齐会", "存量优化", "驻场"],a:"这条不是执行活。客户表面要折扣，调研后我判断真实诉求是降本加迁移稳定——只靠商务折扣，成本降不下来且迁移风险无人兜底。于是我把方案锚定为存量优化为主、商务折扣为辅，驻场北京并组织 6 场跨团队对齐会，最终让客户管理层认可了这个顺序。先让客户接受更正确的路径，而不是先让价，体现的是商务判断力。"},
+ {kw:["教育科技", "workbuddy", "企业版", "部署", "ai需求"],a:"这是我独立发掘的一条需求：一家教育科技公司的 Token 与 Workbuddy 企业版 AI 部署。它和 AIGC 影视那条放在一起说明，我对 AI 需求的识别不是撞上的——我能从客户的业务流程里定位 AI 该落在哪个环节、要消耗什么资源，再据此判断商机量级。"},
+ {kw:["合同", "结算", "发票", "回款", "风险", "流程", "项目支持"],a:"项目支持部分我协助销售、售前、实施等部门沟通，协助组织跨部门协调会，并跟进合同签订与修改、结算和发票流程，规避回款风险。这部分不产生亮点，却是商机真正变成收入的最后一公里——签不下来、开不出发票，前面的挖掘都白做。"},
+ {kw:["为什么", "转", "咨询", "云", "互联网", "转型", "职业选择"],a:"从咨询到云不是转向，是同一件事换了载体：我一直在做在信息不完整的情况下把需求挖出来并推动落地。咨询给我结构化拆解和高层沟通能力，电商和云给我把方案推到真正跑起来、产生数字的闭环。AI 让这件事有了更好的载体——客户比以往任何时候都更需要有人把技术讲成生意。"},
+ {kw:["咨询", "云", "区别", "差异", "对比", "不一样"],a:"咨询交付的是报告和结论，客户认可的是逻辑；云交付的是消耗，客户认可的是账。前者止于建议被采纳，后者必须跑到客户真的在用、真的在付费。这也是我选腾讯云的原因——我想对自己推的方案的结果负责，而不只是对报告质量负责。"},
+ {kw:["京东", "转正", "放弃", "离职", "为什么走", "后悔"],a:"京东组内基本可以保证转正、老板也很关照，但我对当时所做品类的前景不是很有信念。结合个人兴趣和职业发展，科技 AI、云、家电 3C 出海 GTM 这类赛道更吸引我，未来也更有预期。放弃一个确定性不错的机会去换一条更难的赛道，我不想因为错过而后悔——这是我现在仍然认的判断。"},
+ {kw:["京东", "采销", "数字", "业绩", "做了什么", "27", "900"],a:"鞋靴品类。用 JoyClaw AI 输入近两年 GMV、广告费率、建联情况做加权分层，筛出各地区 Top 50 商家并做潜力分析和周看板；未建联商家多渠道建联 27 家、可控 12 家。直接建联 100+ CPS 团长完成 150 例渠道销售，爆款拖鞋一周两次合作卖出 900+ 单、GMV 环比增长 600% 以上；培训 30+ 商家后低质量上品减少 40%。"},
+ {kw:["joyclaw", "ai提效", "周报", "60%", "自动化", "效率"],a:"京东内部叫 JoyClaw AI。我用它设定自动化流程做鞋靴品类周报，把取数、清洗、分析这条重复链路自动化，数据提取和分析效率提高 60% 以上。同样的思路我在腾讯继续用：现在这个网页连同它的交互与 AI 问答模块，也是我从 0 到 1 搭出来的。"},
+ {kw:["安永", "ey", "esg", "做了什么", "评级", "cdp", "djsi", "ecovadis", "msci"],a:"安永咨询线可持续战略组，2024.06–2025.03，跨上海所与北京所。参与多家公司资本市场评级提升项目，填报 CDP、DJSI、EcoVadis、MSCI 等第三方 ESG 评级；参与头部国际食品公司供应链转型项目，对福利蛋供应商做规模分析并产出 30 页可行性报告及分析图；跟进 6 家客户 ESG 报告撰写。"},
+ {kw:["80页", "bd", "商务拓展", "客户会", "邀约", "17份", "高层", "纪要"],a:"在三大交易所信息披露新规背景下我负责头部企业 BD：整理潜在客户国内外业务面临的气候变化披露政策要求，输出 80 页服务方案 PPT（需求理解、标杆案例、数据分析材料、方案可视化图表），参与 3 轮客户拜访并现场展示；协助组织北京、深圳、天津、昆明 4 场客户会，多渠道邀约 100+ 潜在客户参会；整理能源、餐饮等行业高层访谈纪要 17 份。"},
+ {kw:["安永", "学到", "收获", "咨询能力", "沉淀", "迁移"],a:"两件事：一是结构化，任何问题先拆成可回答的子问题，再决定哪些值得做；二是客户语言，ESG 评级填报和高层访谈让我习惯用客户内部能流通的语言写材料。这两点直接迁移到腾讯云——AIGC 客户那次需求澄清用的就是同一套拆法，只是把评级指标换成了调用量级。"},
+ {kw:["自媒体", "小红书", "capybara", "粉丝", "数据", "笔记", "赞"],a:"小红书「Capybara」，实测 24 篇笔记（2024.03–2026.07），累计获赞 10,195、收藏 3,008、评论 1,704、分享 1,793，粉丝 2,671。单篇最高是《第一段咨询实习结束啦》2,736 赞 / 1,191 收藏。多平台（含校内平台）合计推文点赞 2.3 万+、阅读量 30 万+。数据都是逐篇抓取的，可按篇核对。"},
+ {kw:["内容观", "爆款", "什么内容", "选题", "规律", "收藏", "评论"],a:"三条从我自己数据里复盘出来的规律：一、真实细节加具体数字最能传播，职场实录是主力，Top 篇几乎都是实习实录；二、干货型内容收藏率最高，雅思心得 268 赞换 204 藏，藏赞比约 76%；三、抛出真实纠结比展示成绩更能引发对话，LBS 那篇 376 赞换 256 评论，评论赞比约 68%，远高于均值。"},
+ {kw:["代表作", "哪篇", "最好", "最火", "推荐", "看哪篇"],a:"只看一篇：《第一段咨询实习结束啦》（2,736 赞 / 1,191 收藏），安永实习结束的复盘，含带教 manager 对我的评价。看观点：《宁诺｜年级 Top 1%，或许我终于可以谈谈 UNNC》（1,305 赞 / 518 藏），写清了这所学校不适合哪些人。看决策：《从宁诺的年级前 1% 到 LBS 录取，但……》（376 赞 / 256 评论）。"},
+ {kw:["商业化", "变现", "盈利", "7万", "签约", "客户", "工作室"],a:"Backwards 工作室，2024.09–2025.09，做留学服务与线下课业辅导，没有投放预算。路径是内容建立信任→私域咨询→签约→交付。一年内开拓潜在客户 130+，留学意向签约客户 40+，线下辅导客户 15+，盈利超过 7 万元。这段经历让我对获客成本有切身体感，也让我更理解客户为什么愿意为信任付费。"},
+ {kw:["学历", "lse", "unnc", "宁诺", "伯明翰", "gpa", "1/312", "交换", "一等"],a:"LSE 管理学硕士（2025.10–2026.11），研究生奖学金 8 万元；本科宁波诺丁汉大学经济学，GPA 3.8/4.0，两年专业第 1（1/312），英制一等荣誉学位、优秀毕业生；免学费赴英国伯明翰大学交换（2023.09–2024.03）。本科奖学金（校长、浙江省政府、宁波市等）累计 10 万元。"},
+ {kw:["英语", "雅思", "口语", "全英文", "怎么练"],a:"雅思 7.5，口语 7.0，首考，听阅 8.5。长期全英文教育与海外生活，具备全英文工作经验——安永的 ESG 评级填报与报告撰写、LSE 的硕士学习都在全英文环境完成。方法是单词量和阅读量优先，把社交和常用软件改成英文、用感兴趣的内容练语感，考前一周每天保持手感，而不是背题。"},
+ {kw:["lbs", "nus", "duke", "选校", "为什么选lse", "录取", "offer"],a:"同期录取 LBS、NUS、Duke、LSE。LBS 是这个申请季最好的 Offer，但我没按排名选：它在国内除头部金融与咨询外认知度有限，而我的本科是中外合办，需要一个在国内各行业都无需额外解释的 title 来降低筛选成本。这是我 2025 年 3 月公开写下的判断，如今做 B 端商务，仍然受益于这个 title。"},
+ {kw:["最低分", "逆袭", "怎么做到", "学习方法", "专业第一", "起点"],a:"入校时是当年录取的全省高考最低分，上课要靠翻译软件才听得懂。转折发生在方法上：单词量和阅读量优先，不啃读不懂的阅读题；把手机和常用软件改成英文，用历史、科幻纪录片这类感兴趣的内容练语感；考前集中刷题，考前一周每天保持手感。两年后拿到专业前 1%、3.5 万校长奖学金、雅思首考 7.5。"},
+ {kw:["ai", "工具", "workbuddy", "codex", "prompt", "agent", "gamma", "notebooklm", "资格证"],a:"熟悉 Workbuddy、Codex、AI Agent 工作流、Prompt Engineering、Gamma、NotebookLM，具备 AI 自动化流程搭建经验；持腾讯云从业者资格证。在京东用 JoyClaw AI 搭自动化流程，数据分析效率提升 60% 以上；在腾讯我卖的就是 AI 产品。这个网页含交互与 AI 问答模块，是我从 0 到 1 搭的。"},
+ {kw:["token", "gpu", "怎么理解", "ai产品", "商业化", "算力"],a:"Token 是按调用量计费的消耗品，GPU 是算力底座，两者共同决定 AI 客户的成本结构。客户的难点不是单价，是估不准量——跑之前不知道要花多少。所以商务的价值在于把业务场景换算成调用量级，让客户敢开始跑；跑起来之后，消耗本身会说明一切。AIGC 影视客户就是从估不准走到后付费跑量的例子。"},
+ {kw:["优点", "优势", "强项", "凭什么", "核心竞争力"],a:"两条。一是需求挖掘：客户说不清时我也能把问题问出来，AIGC 影视、大湾区旅游业客户都是这么挖的。二是推得动：字节迁移那次靠 6 场跨团队对齐会，让客户管理层接受了一个比单纯让价更正确的方案。再加一条：我愿意在客户现场把事情做完，而不是停在方案阶段。"},
+ {kw:["缺点", "不足", "短板", "改进", "弱项"],a:"最明显的短板是技术背景：纯文商科，没有理工科训练，刚接触云产品时架构和参数要靠现学。处理方式是把不懂的当场记下来、会后找架构师对齐，不糊过去，同时考了腾讯云从业者资格证补基础。另一个短板是经验尚浅，多客户并线时优先级排序还需要更果断。"},
+ {kw:["压力", "抗压", "怎么扛", "加班", "情绪", "并行"],a:"我不太喜欢空谈抗压，说事实：京东日均处理上品 2000+、连续两个月；安永 9 个月跨沪京两地并行 6 家客户报告、80 页 BD 方案与 4 场客户会；硕士在读期间连续完成京东与腾讯两段全职实习，伦敦、北京、深圳三地切换。我的方式是把多线任务拆成日颗粒度清单，先保证每条线的最低交付，再争取增量。"},
+ {kw:["兴趣", "爱好", "业余", "游戏", "做饭", "运动", "ps5"],a:"打游戏和做饭，背着 PS5 满世界跑——到伦敦第一天就把显示器和主机接好，落地当天大屏玩上丝之歌。运动上打羽毛球，在京东时周末和同事约老板一起打，也游泳。另外演过三场话剧、云南支过教。这些没写进简历，但它们决定了我愿意在陌生人面前把话说清楚，也扛得住被注视。"},
+ {kw:["规划", "未来", "3年", "留在腾讯", "目标", "转正"],a:"短期是把在手的商机真正跑成收入：AIGC 客户从跑量走到稳定续费，旅游业客户从选型走到签约。中长期我想成为既懂 AI 产品、又能独立拿下一整条行业的商务——先在影视、教育科技这类 AI 原生客户里做深，再把可复制的需求识别方法沉淀成打法，而不是靠单点的勤奋。"},
+ {kw:["非985", "文商科", "学历不够", "竞争", "理工科", "差异化", "7轮"],a:"我非 985/211、纯文商科，没有理工技术背景，简历上也没有大厂垂直经历，腾讯暑期是经历 7 轮流程（AI 面—群面—AI 英语面—业务面—Leader 面—总监面—HR 面）拿下的。和理工背景候选人比，我不比参数；我的差异在客户那一侧——把技术讲成客户算得清的账，并在客户现场把方案推到产生消耗。技术可以补，客户信任和判断力只能在现场长出来。"},
+ {kw:["雷达","矩阵","六边形","能力图","自评","评分","打分","口径","短板","为什么这么低"],a:"分数是我自己的评估，不是任何机构的测评结果。口径：0–100 分，图上是我当下的水平。学习 95、抗压与多线交付 94、英语与跨文化 93 这三项我直接给满——不是因为觉得自己完美，而是这三项每一分都有可核对的硬事实兜底：专业第一（1/312）、雅思 7.5 与全英文工作环境、独立拓客并跨北上港深与海外独立工作学习。AI 与工具应用 70、数据分析与判断 65，方法论还在成型，我按实际水平给；技术理解只给 48，因为架构选型、参数配置、故障排查都要靠真实项目的时间去堆，我现在能对到业务价值与量级层（Token / GPU 消耗怎么算），架构层仍依赖架构师。每一项都附了佐证与正在做的提升动作。矩阵每格的深浅代表那段经历对这项能力的支撑强度：强 = 有可量化的核心结果，中 = 有明确产出，弱 = 有涉及但不构成主证据，空白 = 没有直接证据，我不往上凑。"}
+];
+var SUGG=["AIGC 影视那个项目具体怎么做的？","技术理解为什么只给自己 48 分？","你为什么没按排名选 LBS？","你的抗压能力有什么证据？","你为什么从咨询转到互联网？","你的 AI 能力体现在哪？","自媒体一年赚了多少？","你做事的方法是什么？","非 985 文商科，你的差异化在哪？"];
+
+
+var curCap=null,curExp=null;
+function paint(el,mode){
+  el.className=el.className.replace(/ (on|off)/g,"")+(mode==="mid"?"":" "+mode);
+}
+function renderEvidence(){
+  var box=document.getElementById("evidence");
+  var head='<div class="eh">EVIDENCE · 硬证据</div>';
+  if(curCap){
+    box.innerHTML=head+'<ul>'+(EVID[curCap]||[]).map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul>';
+    return;
+  }
+  if(curExp){
+    var hits=[];
+    CAPS.forEach(function(c){if(REL[c.id].indexOf(curExp)>-1)hits.push(c.t)});
+    box.innerHTML=head+'<div style="font-size:13.5px;color:#2C3B52;line-height:1.85"><b>'+EXPNAME[curExp]+'</b> 沉淀了以下能力：'+hits.join(" · ")+'。点左侧任一能力标签可查看对应证据。</div>';
+    return;
+  }
+  box.innerHTML=head+'<div class="empty">选择一个能力或一段经历，这里会显示它的硬证据。</div>';
+}
+function drawCaps(){
+  var ce=document.getElementById("caps").children;
+  var xe=document.getElementById("exps").children;
+  if(!curCap&&!curExp){
+    for(var i=0;i<ce.length;i++)paint(ce[i],"mid");
+    for(var j=0;j<xe.length;j++)paint(xe[j],"mid");
+  }else if(curCap){
+    for(var a=0;a<CAPS.length;a++)paint(ce[a],CAPS[a].id===curCap?"on":"off");
+    for(var b=0;b<EXPS.length;b++)paint(xe[b],REL[curCap].indexOf(EXPS[b].id)>-1?"on":"off");
+  }else{
+    for(var c=0;c<CAPS.length;c++)paint(ce[c],REL[CAPS[c].id].indexOf(curExp)>-1?"on":"off");
+    for(var d=0;d<EXPS.length;d++)paint(xe[d],EXPS[d].id===curExp?"on":"off");
+  }
+  renderEvidence();
+  updateRadar(curCap);
+  renderCapSide(curCap);
+  updateMatrixSel(curCap,curExp);
+}
+/* ---------- 能力六边形雷达 ---------- */
+var RCX=260,RCY=178,RR=120,animV=[];
+function rang(i){return -Math.PI/2+i*Math.PI/3;}
+function rpt(i,v){var a=rang(i),r=RR*v/100;return [RCX+Math.cos(a)*r,RCY+Math.sin(a)*r];}
+function rpoly(vs){var o=[];for(var i=0;i<vs.length;i++){var p=rpt(i,vs[i]);o.push(p[0].toFixed(1)+","+p[1].toFixed(1));}return o.join(" ");}
+function radAnchor(i){var c=Math.cos(rang(i));return c>0.3?"start":(c<-0.3?"end":"middle");}
+(function buildRadar(){
+  var svg=document.getElementById("radar");
+  if(!svg)return;
+  var g="";
+  RADAR.forEach(function(r){animV.push(0);});
+  [25,50,75,100].forEach(function(v){
+    g+='<polygon points="'+rpoly([v,v,v,v,v,v])+'" fill="none" stroke="#E4ECF6" stroke-width="1"/>';
+  });
+  RADAR.forEach(function(r,i){
+    var p=rpt(i,100);
+    g+='<line id="raxis'+i+'" x1="'+RCX+'" y1="'+RCY+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+'" stroke="#E1E9F4" stroke-width="1"/>';
+  });
+  g+='<polygon id="rpoly" points="'+rpoly(animV)+'" fill="rgba(18,58,99,.13)" stroke="#123A63" stroke-width="2"/>';
+  RADAR.forEach(function(r,i){
+    var p=rpt(i,r.now),a=rang(i);
+    var lx=RCX+Math.cos(a)*(RR+34),ly=RCY+Math.sin(a)*(RR+34);
+    var dy=Math.sin(a)>0.5?11:(Math.sin(a)<-0.5?-3:4);
+    g+='<circle id="rdot'+i+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4" fill="#fff" stroke="#123A63" stroke-width="2"/>';
+    g+='<text id="rval'+i+'" class="axval" text-anchor="'+radAnchor(i)+'"></text>';
+    g+='<text id="rlabel'+i+'" class="axlabel" data-cap="'+r.id+'" x="'+lx.toFixed(1)+'" y="'+(ly+dy).toFixed(1)+'" text-anchor="'+radAnchor(i)+'">'+CAPNAME[r.id]+'</text>';
+    g+='<circle class="axhit" data-cap="'+r.id+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="22"/>';
+  });
+  svg.innerHTML=g;
+  svg.addEventListener("click",function(e){
+    var id=e.target.getAttribute?e.target.getAttribute("data-cap"):null;
+    if(!id)return;
+    curCap=(curCap===id?null:id);curExp=null;drawCaps();
+  });
+  paintRadar();
+  function runAnim(){
+    var t0=null,dur=950;
+    function step(ts){
+      if(t0===null)t0=ts;
+      var k=Math.min(1,(ts-t0)/dur);k=1-Math.pow(1-k,3);
+      RADAR.forEach(function(r,i){animV[i]=r.now*k;});
+      paintRadar();
+      if(k<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if(window.IntersectionObserver){
+    var io=new IntersectionObserver(function(es){
+      for(var i=0;i<es.length;i++){if(es[i].isIntersecting){runAnim();io.disconnect();}}
+    },{threshold:.15});
+    io.observe(svg);
+  }else{runAnim();}
+})();
+function paintRadar(){
+  var poly=document.getElementById("rpoly");
+  if(!poly)return;
+  poly.setAttribute("points",rpoly(animV));
+  RADAR.forEach(function(r,i){
+    var d=document.getElementById("rdot"+i),t=document.getElementById("rval"+i);
+    if(!d||!t)return;
+    var p=rpt(i,animV[i]),a=rang(i),ri=RR*animV[i]/100-21;
+    d.setAttribute("cx",p[0].toFixed(1));d.setAttribute("cy",p[1].toFixed(1));
+    t.setAttribute("x",(RCX+Math.cos(a)*ri).toFixed(1));
+    t.setAttribute("y",(RCY+Math.sin(a)*ri+3.5).toFixed(1));
+    t.textContent=Math.round(animV[i]);
+  });
+}
+function updateRadar(id){
+  RADAR.forEach(function(r,i){
+    var l=document.getElementById("rlabel"+i),v=document.getElementById("rval"+i),
+        d=document.getElementById("rdot"+i),ax=document.getElementById("raxis"+i),on=(id===r.id);
+    if(l)l.setAttribute("class","axlabel"+(on?" on":""));
+    if(v)v.setAttribute("class","axval"+(on?" on":""));
+    if(d){d.setAttribute("r",on?5.5:4);d.setAttribute("stroke",on?"#C9A961":"#123A63");}
+    if(ax)ax.setAttribute("stroke",on?"#E7D6A8":"#E1E9F4");
+  });
+}
+function renderCapSide(id){
+  var box=document.getElementById("capside");
+  if(!box)return;
+  if(!id){
+    var an=0;
+    RADAR.forEach(function(r){an+=r.now;});
+    an=Math.round(an/RADAR.length);
+    var list="";
+    RADAR.slice().sort(function(a,b){return b.now-a.now;}).forEach(function(r){
+      list+='<div><span>'+r.now+'</span>'+CAPNAME[r.id]+'</div>';
+    });
+    box.innerHTML='<div class="cside-sh">CAPABILITY RADAR · 能力六边形</div>'+
+      '<h4>六项能力</h4><div class="cen">Self-assessment · 0–100</div>'+
+      '<div class="csc"><div><span class="n">'+an+'</span><span class="l">六项均值</span></div></div>'+
+      '<div class="cdef">分数是自评，每一项背后是可核对的事实。</div>'+
+      '<div class="clist">'+list+'</div>'+
+      '<div class="chint">点雷达任一顶点，看佐证与提升动作。</div>';
+    return;
+  }
+  var r=RADMAP[id],c=null,best=MXCOLS[0];
+  CAPS.forEach(function(x){if(x.id===id)c=x;});
+  MXCOLS.forEach(function(e){if((MATRIX[id][e.id]||0)>(MATRIX[id][best.id]||0))best=e;});
+  box.innerHTML='<div class="cside-sh">CAPABILITY · '+c.e+'</div>'+
+    '<h4>'+c.t+'</h4><div class="cen">'+c.e+'</div>'+
+    '<div class="csc"><div><span class="n">'+r.now+'</span><span class="l">自评 · 0–100</span></div></div>'+
+    '<div class="cdef">'+CAPDEF[id]+'</div>'+
+    '<div class="cev"><b>最强支撑 · '+EXPNAME[best.id]+'：</b>'+(MNOTE[id+"|"+best.id]||"")+'</div>'+
+    '<div class="cev"><b>佐证 · '+(EVID[id]||[]).length+' 条硬事实：</b>'+(EVID[id]||[]).join("；")+'。</div>'+
+    (GAP[id]?'<div class="cgap"><b>为什么只给 '+r.now+' 分：</b>'+GAP[id]+'</div>':'')+
+    '<div class="cup"><b>我在怎么提升：</b>'+UPLIFT[id]+'</div>';
+}
+(function buildMatrix(){
+  var tb=document.getElementById("mxtable");
+  if(!tb)return;
+  var h='<tr><th class="rh"></th>';
+  MXCOLS.forEach(function(e){h+='<th>'+e.s+'</th>';});
+  var rows="";
+  CAPS.forEach(function(c){
+    rows+='<tr><th class="rh">'+c.t+'</th>';
+    MXCOLS.forEach(function(e){
+      var lv=MATRIX[c.id][e.id]||0;
+      rows+='<td class="l'+lv+'" data-cap="'+c.id+'" data-exp="'+e.id+'">'+(lv===3?"强":(lv===2?"中":(lv===1?"弱":"·")))+'</td>';
+    });
+    rows+='</tr>';
+  });
+  tb.innerHTML='<thead>'+h+'</tr></thead><tbody>'+rows+'</tbody>';
+  var tip=document.getElementById("mxtip"),def=tip.innerHTML;
+  var cells=tb.querySelectorAll("td");
+  for(var i=0;i<cells.length;i++){
+    (function(td){
+      var cap=td.getAttribute("data-cap"),exp=td.getAttribute("data-exp"),lv=MATRIX[cap][exp]||0;
+      td.onmouseenter=function(){
+        var nm=lv===3?"强":(lv===2?"中":(lv===1?"弱":"无直接证据"));
+        tip.innerHTML='<b>'+CAPNAME[cap]+' × '+EXPNAME[exp]+'</b> · '+nm+'<br>'+
+          (MNOTE[cap+"|"+exp]||"这段经历对这项能力没有直接证据，我不往上凑。")+
+          '<span class="em">点击格子：选中该能力，并展开这段经历的详情。</span>';
+      };
+      td.onmouseleave=function(){tip.innerHTML=def;};
+      td.onclick=function(){curCap=cap;curExp=null;drawCaps();openTL(exp);};
+    })(cells[i]);
+  }
+})();
+function updateMatrixSel(cap,exp){
+  var tb=document.getElementById("mxtable");
+  if(!tb)return;
+  var cells=tb.querySelectorAll("td");
+  for(var i=0;i<cells.length;i++){
+    var td=cells[i],c=td.getAttribute("data-cap"),e=td.getAttribute("data-exp");
+    var on=((cap&&c===cap)||(exp&&e===exp));
+    td.className="l"+(MATRIX[c][e]||0)+(on?" sel":"");
+  }
+}
+
+(function buildCaps(){
+  var cb=document.getElementById("caps"),eb=document.getElementById("exps");
+  CAPS.forEach(function(c){
+    var d=document.createElement("div");
+    d.className="capitem";
+    d.innerHTML='<div class="t">'+c.t+'</div><div class="e">'+c.e+'</div>';
+    d.onclick=function(){curCap=(curCap===c.id?null:c.id);if(curCap)curExp=null;drawCaps();};
+    cb.appendChild(d);
+  });
+  EXPS.forEach(function(e){
+    var d=document.createElement("div");
+    d.className="expcard";
+    d.innerHTML='<div class="lg'+(e.lg==="md"?" lgmd":"")+'">'+LOGOS[e.lg]+'</div><div><div class="t">'+e.t+'</div><div class="d">'+e.d+'</div></div>';
+    d.onclick=function(){curExp=(curExp===e.id?null:e.id);if(curExp)curCap=null;drawCaps();};
+    eb.appendChild(d);
+  });
+})();
+
+(function buildTL(){
+  var pro=document.getElementById("tlpro"),edu=document.getElementById("tledu");
+  var eduList=TL.filter(function(x){return x.grp==="edu";});
+  var list=TL.filter(function(x){return x.grp!=="edu";}).concat(eduList);
+  list.forEach(function(it){
+    var tl=(it.grp==="edu")?edu:pro;
+    var w=document.createElement("div");
+    w.className="tlitem"+(it.hl?" hl":"");
+    var mini=it.mini.map(function(m){return "<div><b>"+m[0]+"</b><span>"+m[1]+"</span></div>"}).join("");
+    var kpi=it.kpi.map(function(k){return "<div><b>"+k[0]+"</b>"+k[1]+"</div>"}).join("");
+    var sar=it.sar.map(function(s){return '<div class="k">'+s[0]+'</div><div class="v">'+s[1]+'</div>'}).join("");
+    var ac=(ACCENT[it.lg]||["#1B3A6B","#F2F5FA"]);
+    var shots=(it.shots&&it.shots.length)?('<div class="shots" style="--ac:'+ac[0]+';--act:'+ac[1]+'">'+it.shots.map(function(s){return '<figure><img src="assets/xhs/'+s[0]+'" loading="lazy" alt="'+s[1]+'" data-cap="'+s[1]+'"><figcaption>'+s[1]+'</figcaption></figure>'}).join("")+'</div>'):"";
+    var live=(it.live&&it.live.length)?('<div class="livestrip">'+it.live.map(function(s){return '<img src="assets/xhs/'+s[0]+'" loading="lazy" data-cap="'+s[1]+'" title="'+s[1]+'">'}).join("")+'</div>'):"";
+    w.innerHTML='<div class="tlhead'+(it.hl?" casehl":"")+'">'+
+      '<div class="lgwrap"><div class="lg'+(it.lg==="md"?" lgmd":"")+'">'+LOGOS[it.lg]+'</div>'+(it.lg==="md"?'<div class="lgcap">小红书主页 · Capybara</div>':"")+live+'</div>'+
+      '<div><div class="ttl">'+it.ttl+'</div><div class="meta">'+it.meta+'</div><div class="hook">'+it.hook+'</div></div>'+
+      '<div class="minik">'+mini+'</div><div class="arrow">&#9656;</div></div>'+
+      '<div class="tlbody"><div class="sar">'+sar+'</div><div class="kpi">'+kpi+'</div>'+shots+'</div>';
+    var h=w.querySelector(".tlhead"),b=w.querySelector(".tlbody");
+    h.onclick=function(){
+      var open=b.classList.contains("open");
+      b.classList.toggle("open");h.classList.toggle("open");
+      b.style.display=open?"none":"block";
+    };
+    w.dataset.tl=it.id;
+    tl.appendChild(w);
+  });
+})();
+(function(){
+  var lb=document.createElement("div");
+  lb.id="lbox";
+  lb.innerHTML='<img alt=""><div class="cap"></div>';
+  document.body.appendChild(lb);
+  document.addEventListener("click",function(e){
+    var t=e.target;
+    var inStrip=t.parentElement&&t.parentElement.classList&&t.parentElement.classList.contains("livestrip");
+    var inShots=t.parentElement&&t.parentElement.tagName==="FIGURE"&&t.getAttribute("data-cap");
+    var isMdLogo=t.classList&&t.classList.contains("mdlogo");
+    if(t.tagName==="IMG"&&(inStrip||inShots||isMdLogo)){
+      lb.querySelector("img").src=t.src;
+      lb.querySelector(".cap").textContent=t.getAttribute("data-cap")||"";
+      lb.classList.add("on");
+      e.stopPropagation();
+      return;
+    }
+    if(lb.classList.contains("on")&&(t===lb||t.parentElement===lb)){lb.classList.remove("on");}
+  });
+})();
+function openTL(id){
+  var all=document.querySelectorAll(".tlitem");
+  for(var i=0;i<all.length;i++){
+    var b=all[i].querySelector(".tlbody"),h=all[i].querySelector(".tlhead");
+    if(all[i].dataset.tl===id){b.classList.add("open");h.classList.add("open");b.style.display="block";}
+    else{b.classList.remove("open");h.classList.remove("open");b.style.display="none";}
+  }
+}
+
+(function buildBars(){
+  var box=document.getElementById("bars");
+  function render(v){
+    box.innerHTML=VIEWS[v].map(function(r){
+      return '<div class="bar"><div>'+r[0]+'</div><div class="track"><div class="fill'+(v==="xhs"?"":" g")+'" style="width:'+r[2]+'%"></div></div><div class="val">'+r[1]+'</div></div>';
+    }).join("");
+  }
+  render("xhs");
+  var chips=document.querySelectorAll(".switch .chip");
+  for(var i=0;i<chips.length;i++){
+    chips[i].onclick=function(){
+      for(var j=0;j<chips.length;j++)chips[j].className="chip";
+      this.className="chip on";render(this.dataset.view);
+    };
+  }
+})();
+
+(function buildHighlights(){
+  var box=document.getElementById("hlgrid");
+  if(!box||!HIGHLIGHTS)return;
+  box.innerHTML=HIGHLIGHTS.map(function(h,i){
+    return '<div class="hlc"><div class="rk">'+(i+1)+'</div><div class="bd"><div class="tt">'+h.title+'</div>'+
+      '<div class="dt">'+h.date+'</div>'+
+      '<div class="nums"><span>赞 <b>'+h.like+'</b></span><span>藏 <b>'+h.collect+'</b></span><span>评 <b>'+h.comment+'</b></span></div>'+
+      '<div class="why">'+h.why+'</div></div>'+
+      (h.img?'<div class="thumb"><img src="assets/xhs/'+h.img+'" loading="lazy" alt="'+h.title+'"></div>':'')+'</div>';
+  }).join("");
+})();
+
+(function buildVoices(){
+  var box=document.getElementById("voices");
+  if(!box||!VOICES)return;
+  box.innerHTML=VOICES.map(function(v){
+    return '<div class="voc"><div class="q">「'+v.quote+'」</div>'+
+      '<div class="cm">'+v.note+'</div>'+
+      '<div class="src">— 摘自《'+v.from+'》· '+v.date+'</div></div>';
+  }).join("");
+})();
+
+(function buildAsk(){
+  var sb=document.getElementById("sugg");
+  SUGG.forEach(function(s){
+    var d=document.createElement("div");
+    d.className="chip";d.textContent=s;
+    d.onclick=function(){document.getElementById("q").value=s;ask();};
+    sb.appendChild(d);
+  });
+})();
+function ask(){
+  var raw=document.getElementById("q").value.trim();
+  var box=document.getElementById("answer");
+  if(!raw){box.style.display="none";return;}
+  var q=raw.toLowerCase();
+  var best=null,score=0,hits=0;
+  KB.forEach(function(r){
+    var s=0;
+    r.kw.forEach(function(k){if(q.indexOf(k)>-1)s+=k.length;});
+    if(s>0)hits++;
+    if(s>score){score=s;best=r;}
+  });
+  box.style.display="block";
+  if(best){
+    box.innerHTML=best.a+'<div class="src">检索自个人知识库 · 共 '+KB.length+' 条记录 · 命中 '+hits+' 条</div>';
+  }else{
+    box.innerHTML='这个问题超出了我目前知识库的范围。可以直接问我本人：微信 / 电话 18988401676，或邮箱 zzyzzy921921@outlook.com。<div class="src">知识库共 '+KB.length+' 条记录 · 未命中 · 已给出兜底路径</div>';
+  }
+}
+document.getElementById("q").addEventListener("keydown",function(e){if(e.key==="Enter")ask();});
+
+(function roles(){
+  var map={
+    hr:{hint:"已按<b>招聘方</b>视角调整：优先展示可量化业绩与能力证据，并为你展开腾讯云经历。",cap:"data",tl:"tc"},
+    panel:{hint:"已按<b>答辩评委</b>视角调整：优先展示方法论与从 0 到 1 的完整案例，并为你展开腾讯云经历（含 AIGC 影视案例）。",cap:"learn",tl:"tc"},
+    peer:{hint:"已按<b>同行 / 朋友</b>视角调整：优先展示路径选择与自媒体实践，并为你展开创业经历。",cap:"ai",tl:"md"}
+  };
+  var chips=document.querySelectorAll(".rolebar .chip");
+  for(var i=0;i<chips.length;i++){
+    chips[i].onclick=function(){
+      for(var j=0;j<chips.length;j++)chips[j].className="chip";
+      this.className="chip on";
+      var m=map[this.dataset.role];
+      document.getElementById("rolehint").innerHTML=m.hint;
+      curCap=m.cap;curExp=null;drawCaps();openTL(m.tl);
+    };
+  }
+})();
+
+(function navspy(){
+  var links=document.querySelectorAll(".navlinks a");
+  var secs=["experience","capability","approach","media","overview","assistant","contact"];
+  window.addEventListener("scroll",function(){
+    var y=window.scrollY+140,cur="experience";
+    secs.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el&&el.getBoundingClientRect().top+window.scrollY<=y)cur=id;
+    });
+    for(var i=0;i<links.length;i++){
+      links[i].className=(links[i].getAttribute("href")==="#"+cur)?"nl on":"nl";
+    }
+  });
+})();
+drawCaps();
+openTL("tc");
+</script>
+</body>
+</html>
